@@ -52,7 +52,7 @@ namespace ServiceHub.Controllers
 
             await _context.SaveChangesAsync();
 
-            return Ok(userProfile);
+            return Ok();
         }
 
         [HttpGet("appointments")]
@@ -142,6 +142,21 @@ namespace ServiceHub.Controllers
             };
 
             return Ok(supportInfo);
+        }
+
+        [HttpGet("feedback/{providerId}")]
+        public async Task<IActionResult> GetProviderFeedback(int providerId)
+        {
+            var feedbacks = await _context.Bookings
+                .Where(b => b.ServiceProviderId == providerId && b.Rating.HasValue)
+                .Select(b => new
+                {
+                    b.Rating,
+                    b.Feedback
+                })
+                .ToListAsync();
+
+            return Ok(feedbacks);
         }
     }
 }

@@ -1,9 +1,10 @@
 ﻿using ServiceHub.Data;
 using ServiceHub.Models;
+using ServiceHub.Services.Interfaces;
 using System;
 using System.Threading.Tasks;
 
-namespace ServiceHub.Services
+namespace ServiceHub.Services.Implementation
 {
     public class LoggingService : ILoggingService
     {

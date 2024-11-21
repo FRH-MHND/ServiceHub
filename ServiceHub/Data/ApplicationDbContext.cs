@@ -23,8 +23,10 @@ namespace ServiceHub.Data
         public DbSet<FAQ> FAQs { get; set; }
         public DbSet<SupportContact> SupportContacts { get; set; }
         public DbSet<AdminActionLog> AdminActionLogs { get; set; }
-
-
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
 
     }
 }

@@ -10,5 +10,6 @@
         public string Status { get; set; } = "Pending Verification";
         public string AvailabilityStatus { get; set; } = "Available"; 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public double AverageRating { get; set; }
     }
 }

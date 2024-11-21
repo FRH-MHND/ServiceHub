@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace ServiceHub.Services
+namespace ServiceHub.Services.Interfaces
 {
     public interface ILoggingService
     {

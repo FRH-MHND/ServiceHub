@@ -2,7 +2,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using ServiceHub.Data;
-using ServiceHub.Services;
+using ServiceHub.Services.Implementation;
+using ServiceHub.Services.Interfaces;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);

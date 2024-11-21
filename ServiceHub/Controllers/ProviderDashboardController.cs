@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using ServiceHub.Data;
 using ServiceHub.DTOs;
 using ServiceHub.Models;
-using ServiceHub.Services;
+using ServiceHub.Services.Interfaces;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -90,6 +90,31 @@ namespace ServiceHub.Controllers
             });
 
             return Ok(booking);
+        }
+
+        [HttpPost("feedback")]
+        public async Task<IActionResult> SubmitFeedback([FromBody] FeedbackDto feedbackDto)
+        {
+            var booking = await _context.Bookings.FindAsync(feedbackDto.BookingId);
+            if (booking == null)
+            {
+                return NotFound();
+            }
+
+            booking.Rating = feedbackDto.Rating;
+            booking.Feedback = feedbackDto.Feedback;
+
+            var provider = await _context.ServiceProviders.FindAsync(booking.ServiceProviderId);
+            if (provider != null)
+            {
+                provider.AverageRating = await _context.Bookings
+                    .Where(b => b.ServiceProviderId == provider.Id && b.Rating.HasValue)
+                    .AverageAsync(b => b.Rating.Value);
+            }
+
+            await _context.SaveChangesAsync();
+
+            return Ok();
         }
     }
 }

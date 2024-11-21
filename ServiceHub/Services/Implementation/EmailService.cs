@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
+using ServiceHub.Services.Interfaces;
 
-namespace ServiceHub.Services
+namespace ServiceHub.Services.Implementation
 {
     public class EmailService : IEmailService
     {

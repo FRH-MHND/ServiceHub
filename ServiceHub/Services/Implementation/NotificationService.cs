@@ -1,7 +1,8 @@
 ﻿using System.Threading.Tasks;
 using ServiceHub.DTOs;
+using ServiceHub.Services.Interfaces;
 
-namespace ServiceHub.Services
+namespace ServiceHub.Services.Implementation
 {
     public class NotificationService : INotificationService
     {

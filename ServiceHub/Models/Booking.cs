@@ -14,5 +14,7 @@
         public Service Service { get; set; }
         public ServiceProvider ServiceProvider { get; set; }
         public int ? Rating { get; set; }
+        public string Feedback { get; set; }
+        public DateTime? RescheduledDate { get; set; }
     }
 }

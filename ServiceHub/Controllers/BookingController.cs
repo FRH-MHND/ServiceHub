@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using ServiceHub.Data;
 using ServiceHub.DTOs;
 using ServiceHub.Models;
-using ServiceHub.Services;
+using ServiceHub.Services.Interfaces;
 using System.Threading.Tasks;
 
 namespace ServiceHub.Controllers

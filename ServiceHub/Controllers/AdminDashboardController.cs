@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using ServiceHub.Data;
 using ServiceHub.DTOs;
 using ServiceHub.Models;
-using ServiceHub.Services;
+using ServiceHub.Services.Interfaces;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -88,6 +88,70 @@ namespace ServiceHub.Controllers
             await _context.SaveChangesAsync();
 
             await _loggingService.LogAdminAction(User.Identity.Name, $"Deactivated user {userId}");
+
+            return Ok();
+        }
+
+        [HttpGet("services")]
+        public async Task<IActionResult> GetAllServices()
+        {
+            var services = await _context.Services.ToListAsync();
+            return Ok(services);
+        }
+
+        [HttpPost("services")]
+        public async Task<IActionResult> AddService([FromBody] ServiceDto serviceDto)
+        {
+            var service = new Service
+            {
+                Name = serviceDto.Name,
+                Category = serviceDto.Category,
+                Description = serviceDto.Description,
+                Price = serviceDto.Price
+            };
+
+            _context.Services.Add(service);
+            await _context.SaveChangesAsync();
+
+            await _loggingService.LogAdminAction(User.Identity.Name, $"Added service {service.Name}");
+
+            return Ok(service);
+        }
+
+        [HttpPut("services/{serviceId}")]
+        public async Task<IActionResult> UpdateService(int serviceId, [FromBody] ServiceDto serviceDto)
+        {
+            var service = await _context.Services.FindAsync(serviceId);
+            if (service == null)
+            {
+                return NotFound();
+            }
+
+            service.Name = serviceDto.Name;
+            service.Category = serviceDto.Category;
+            service.Description = serviceDto.Description;
+            service.Price = serviceDto.Price;
+
+            await _context.SaveChangesAsync();
+
+            await _loggingService.LogAdminAction(User.Identity.Name, $"Updated service {service.Name}");
+
+            return Ok(service);
+        }
+
+        [HttpDelete("services/{serviceId}")]
+        public async Task<IActionResult> DeleteService(int serviceId)
+        {
+            var service = await _context.Services.FindAsync(serviceId);
+            if (service == null)
+            {
+                return NotFound();
+            }
+
+            _context.Services.Remove(service);
+            await _context.SaveChangesAsync();
+
+            await _loggingService.LogAdminAction(User.Identity.Name, $"Deleted service {service.Name}");
 
             return Ok();
         }

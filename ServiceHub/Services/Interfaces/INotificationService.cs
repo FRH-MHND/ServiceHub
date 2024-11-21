@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using ServiceHub.DTOs;
 
-namespace ServiceHub.Services
+namespace ServiceHub.Services.Interfaces
 {
     public interface INotificationService
     {

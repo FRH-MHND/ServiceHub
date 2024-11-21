@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ServiceHub.Data;
 using ServiceHub.DTOs;
-using ServiceHub.Services;
+using ServiceHub.Services.Interfaces;
 
 namespace ServiceHub.Controllers
 {
