@@ -12,5 +12,8 @@ namespace ServiceHub.Models
         public decimal Price { get; set; }
         public double AverageRating { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public int ServiceProviderId { get; set; }
+        public ServiceProvider ServiceProvider { get; set; }
+
     }
 }

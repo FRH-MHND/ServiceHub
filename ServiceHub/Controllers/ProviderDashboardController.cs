@@ -41,11 +41,21 @@ namespace ServiceHub.Controllers
             var provider = await _context.ServiceProviders.FindAsync(providerId);
             if (provider == null)
             {
-                return NotFound();
+                return NotFound("Service provider not found.");
+            }
+            if (status != "Available" && status != "Busy" && status != "Offline")
+            {
+                return BadRequest("Invalid status.");
             }
 
             provider.AvailabilityStatus = status;
             await _context.SaveChangesAsync();
+
+            await _notificationService.NotifyProvider(new NotificationDto
+            {
+                RequestId = provider.Id,
+                Message = $"Your availability status has been updated to {status}."
+            });
 
             return Ok(provider);
         }
@@ -56,7 +66,7 @@ namespace ServiceHub.Controllers
             var booking = await _context.Bookings.FindAsync(bookingStatusDto.BookingId);
             if (booking == null)
             {
-                return NotFound();
+                return NotFound("Booking not found.");
             }
 
             booking.Status = "Confirmed";
@@ -77,7 +87,7 @@ namespace ServiceHub.Controllers
             var booking = await _context.Bookings.FindAsync(bookingStatusDto.BookingId);
             if (booking == null)
             {
-                return NotFound();
+                return NotFound("Booking not found.");
             }
 
             booking.Status = "Declined";
@@ -98,7 +108,7 @@ namespace ServiceHub.Controllers
             var booking = await _context.Bookings.FindAsync(feedbackDto.BookingId);
             if (booking == null)
             {
-                return NotFound();
+                return NotFound("Booking not found.");
             }
 
             booking.Rating = feedbackDto.Rating;
@@ -115,6 +125,73 @@ namespace ServiceHub.Controllers
             await _context.SaveChangesAsync();
 
             return Ok();
+        }
+        [HttpPost("services")]
+        public async Task<IActionResult> AddService([FromBody] ServiceDto serviceDto)
+        {
+            var service = new Service
+            {
+                Name = serviceDto.Name,
+                Category = serviceDto.Category,
+                Description = serviceDto.Description,
+                Price = serviceDto.Price,
+                ServiceProviderId = serviceDto.ServiceProviderId
+            };
+
+            _context.Services.Add(service);
+            await _context.SaveChangesAsync();
+
+            await _notificationService.NotifyAdmin(new NotificationDto
+            {
+                RequestId = service.Id,
+                Message = $"New service added by provider {service.ServiceProviderId} for review."
+            });
+
+            return Ok(service);
+        }
+
+        [HttpPut("services/{serviceId}")]
+        public async Task<IActionResult> UpdateService(int serviceId, [FromBody] ServiceDto serviceDto)
+        {
+            var service = await _context.Services.FindAsync(serviceId);
+            if (service == null)
+            {
+                return NotFound("Service not found.");
+            }
+
+            service.Name = serviceDto.Name;
+            service.Category = serviceDto.Category;
+            service.Description = serviceDto.Description;
+            service.Price = serviceDto.Price;
+
+            await _context.SaveChangesAsync();
+
+            return Ok(service);
+        }
+
+        [HttpDelete("services/{serviceId}")]
+        public async Task<IActionResult> DeleteService(int serviceId)
+        {
+            var service = await _context.Services.FindAsync(serviceId);
+            if (service == null)
+            {
+                return NotFound("Service not found.");
+            }
+
+            _context.Services.Remove(service);
+            await _context.SaveChangesAsync();
+
+            return Ok();
+        }
+
+        [HttpGet("services/{providerId}")]
+        public async Task<IActionResult> GetProviderServices(int providerId)
+        {
+            var services = await _context.Services
+                .Where(s => s.ServiceProviderId == providerId)
+                .ToListAsync();
+
+            return Ok(services);
         }
     }
 }

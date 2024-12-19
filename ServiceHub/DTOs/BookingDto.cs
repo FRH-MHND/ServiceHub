@@ -4,6 +4,7 @@
     {
         public int ServiceId { get; set; }
         public int ServiceProviderId { get; set; }
+        public int UserId { get; set; }
         public DateTime AppointmentDate { get; set; }
         public string IssueDescription { get; set; }
         public string UrgencyLevel { get; set; }

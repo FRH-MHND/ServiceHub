@@ -30,7 +30,6 @@ namespace ServiceHub.Controllers
                 return NotFound("Service provider not found.");
             }
 
-            // Verify service availability
             var isAvailable = await _context.Bookings
                 .AnyAsync(b => b.ServiceProviderId == bookingDto.ServiceProviderId && b.AppointmentDate == bookingDto.AppointmentDate);
             if (isAvailable)
@@ -42,7 +41,7 @@ namespace ServiceHub.Controllers
             {
                 ServiceId = bookingDto.ServiceId,
                 ServiceProviderId = bookingDto.ServiceProviderId,
-                UserId = 1, // Replace with actual user ID from authentication context
+                UserId = bookingDto.UserId,
                 AppointmentDate = bookingDto.AppointmentDate,
                 IssueDescription = bookingDto.IssueDescription,
                 UrgencyLevel = bookingDto.UrgencyLevel
@@ -51,7 +50,6 @@ namespace ServiceHub.Controllers
             _context.Bookings.Add(booking);
             await _context.SaveChangesAsync();
 
-            // Send confirmation notifications
             await _notificationService.NotifyUser(new NotificationDto
             {
                 RequestId = booking.Id,
@@ -63,6 +61,47 @@ namespace ServiceHub.Controllers
                 RequestId = booking.Id,
                 Message = "You have a new booking."
             });
+
+            return Ok(booking);
+        }
+
+
+        [HttpPost("cancel")]
+        public async Task<IActionResult> CancelBooking([FromBody] CancelBookingDto cancelBookingDto)
+        {
+            var booking = await _context.Bookings.FindAsync(cancelBookingDto.BookingId);
+            if (booking == null)
+            {
+                return NotFound("Booking not found.");
+            }
+
+            booking.Status = "Canceled";
+            await _context.SaveChangesAsync();
+
+            var isLateCancellation = booking.AppointmentDate <= DateTime.UtcNow.AddHours(1); // Assuming 1 hour before the appointment is considered late
+            if (isLateCancellation)
+            {
+                LogLateCancellation(booking);
+
+                await _notificationService.NotifyUser(new NotificationDto
+                {
+                    RequestId = booking.Id,
+                    Message = "Your booking has been canceled. A late cancellation fee may apply."
+                });
+            }
+
+            await _notificationService.NotifyProvider(new NotificationDto
+            {
+                RequestId = booking.Id,
+                Message = "A booking has been canceled."
+            });
+
+            var provider = await _context.ServiceProviders.FindAsync(booking.ServiceProviderId);
+            if (provider != null)
+            {
+                provider.AvailabilityStatus = "Available";
+                await _context.SaveChangesAsync();
+            }
 
             return Ok(booking);
         }

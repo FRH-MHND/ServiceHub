@@ -8,5 +8,7 @@
         public string Category { get; set; }
         public decimal Price { get; set; }
         public double AverageRating { get; set; }
+        public int ServiceProviderId { get; set; }
+
     }
 }

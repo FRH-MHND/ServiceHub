@@ -25,8 +25,10 @@ namespace ServiceHub.Data
         public DbSet<AdminActionLog> AdminActionLogs { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<ServiceRequest>()
+                .Property(sr => sr.IsExpress)
+                .HasDefaultValue(false);
         }
-
     }
 }
+

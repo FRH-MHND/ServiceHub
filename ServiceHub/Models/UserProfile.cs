@@ -8,5 +8,9 @@
         public string PhoneNumber { get; set; }
         public string AccountSettings { get; set; }
         public bool IsActive { get; set; }
+        public bool ReceiveBookingConfirmations { get; set; }
+        public bool ReceivePromotions { get; set; }
+        public bool ReceiveReminders { get; set; }
+        public int UserId { get; internal set; }
     }
 }

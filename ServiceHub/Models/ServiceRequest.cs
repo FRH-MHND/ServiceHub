@@ -12,6 +12,7 @@ namespace ServiceHub.Models
         public bool IsAccepted { get; set; }
         public bool IsDeclined { get; set; }
         public int ProviderId { get; set; }
-        public int UserId { get; set; } 
+        public int UserId { get; set; }
+        public bool IsExpress { get; set; }
     }
 }

@@ -2,6 +2,10 @@
 using Microsoft.EntityFrameworkCore;
 using ServiceHub.Data;
 using ServiceHub.DTOs;
+using ServiceHub.Services.Interfaces;
+using System.Threading.Tasks;
+using System.Linq;
+using ServiceHub.Models;
 
 namespace ServiceHub.Controllers
 {
@@ -10,10 +14,12 @@ namespace ServiceHub.Controllers
     public class UserDashboardController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
+        private readonly INotificationService _notificationService;
 
-        public UserDashboardController(ApplicationDbContext context)
+        public UserDashboardController(ApplicationDbContext context, INotificationService notificationService)
         {
             _context = context;
+            _notificationService = notificationService;
         }
 
         [HttpGet("profile")]
@@ -157,6 +163,70 @@ namespace ServiceHub.Controllers
                 .ToListAsync();
 
             return Ok(feedbacks);
+        }
+
+        [HttpPost("reschedule")]
+        public async Task<IActionResult> RescheduleBooking([FromBody] RescheduleBookingDto rescheduleBookingDto)
+        {
+            var booking = await _context.Bookings.FindAsync(rescheduleBookingDto.BookingId);
+            if (booking == null)
+            {
+                return NotFound("Booking not found.");
+            }
+
+            // Check availability of the new time slot
+            var isAvailable = await _context.Bookings
+                .AnyAsync(b => b.ServiceProviderId == booking.ServiceProviderId && b.AppointmentDate == rescheduleBookingDto.NewAppointmentDate);
+            if (isAvailable)
+            {
+                return BadRequest("The service provider is not available at the selected date and time.");
+            }
+
+            // Update booking details
+            booking.RescheduledDate = rescheduleBookingDto.NewAppointmentDate;
+            booking.AppointmentDate = rescheduleBookingDto.NewAppointmentDate;
+            await _context.SaveChangesAsync();
+
+            // Notify user and provider
+            await _notificationService.NotifyUser(new NotificationDto
+            {
+                RequestId = booking.Id,
+                Message = "Your booking has been rescheduled."
+            });
+
+            await _notificationService.NotifyProvider(new NotificationDto
+            {
+                RequestId = booking.Id,
+                Message = "A booking has been rescheduled."
+            });
+
+            LogReschedulingAction(booking); // Call the logging method
+
+            return Ok(booking);
+        }
+
+        [HttpGet("available-slots")]
+        public async Task<IActionResult> GetAvailableTimeSlots(int providerId, DateTime date)
+        {
+            var bookedSlots = await _context.Bookings
+                .Where(b => b.ServiceProviderId == providerId && b.AppointmentDate.Date == date.Date)
+                .Select(b => b.AppointmentDate)
+                .ToListAsync();
+
+            // Assuming service provider works from 9 AM to 5 PM with 1-hour slots
+            var availableSlots = Enumerable.Range(9, 8)
+                .Select(hour => date.Date.AddHours(hour))
+                .Where(slot => !bookedSlots.Contains(slot))
+                .ToList();
+
+            return Ok(availableSlots);
+        }
+
+        // Add the missing LogReschedulingAction method
+        private void LogReschedulingAction(Booking booking)
+        {
+            // Implement the logging logic here
+            // For example, log to a file, database, or any logging service
         }
     }
 }

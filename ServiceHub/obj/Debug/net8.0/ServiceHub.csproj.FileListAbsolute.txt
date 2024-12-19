@@ -1,0 +1,8 @@
+C:\Users\f.aljawad\Desktop\SH\ServiceHub\ServiceHub\obj\Debug\net8.0\ServiceHub.csproj.AssemblyReference.cache
+C:\Users\f.aljawad\Desktop\SH\ServiceHub\ServiceHub\obj\Debug\net8.0\ServiceHub.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\f.aljawad\Desktop\SH\ServiceHub\ServiceHub\obj\Debug\net8.0\ServiceHub.AssemblyInfoInputs.cache
+C:\Users\f.aljawad\Desktop\SH\ServiceHub\ServiceHub\obj\Debug\net8.0\ServiceHub.AssemblyInfo.cs
+C:\Users\f.aljawad\Desktop\SH\ServiceHub\ServiceHub\obj\Debug\net8.0\ServiceHub.csproj.CoreCompileInputs.cache
+C:\Users\f.aljawad\Desktop\SH\ServiceHub\ServiceHub\obj\Debug\net8.0\ServiceHub.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\f.aljawad\Desktop\SH\ServiceHub\ServiceHub\obj\Debug\net8.0\ServiceHub.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\f.aljawad\Desktop\SH\ServiceHub\ServiceHub\obj\Debug\net8.0\ServiceHub.sourcelink.json

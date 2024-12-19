@@ -13,10 +13,11 @@ namespace ServiceHub.Controllers
         private readonly ApplicationDbContext _context;
         private readonly INotificationService _notificationService;
 
-        public AdminController(IUserService userService)
+        public AdminController(IUserService userService, ApplicationDbContext context, INotificationService notificationService)
         {
             _userService = userService;
-
+            _context = context;
+            _notificationService = notificationService;
         }
 
         [HttpPost("login")]
@@ -36,13 +37,14 @@ namespace ServiceHub.Controllers
             var token = await _userService.GenerateJwtToken(admin);
             return Ok(new { Token = token, Admin = admin });
         }
+
         [HttpPost("approve/{id}")]
         public async Task<IActionResult> ApproveServiceProvider(int id)
         {
             var serviceProvider = await _context.ServiceProviders.FindAsync(id);
             if (serviceProvider == null)
             {
-                return NotFound();
+                return NotFound("Service provider not found.");
             }
 
             serviceProvider.Status = "Approved";
@@ -63,7 +65,7 @@ namespace ServiceHub.Controllers
             var serviceProvider = await _context.ServiceProviders.FindAsync(id);
             if (serviceProvider == null)
             {
-                return NotFound();
+                return NotFound("Service provider not found.");
             }
 
             serviceProvider.Status = "Rejected";

@@ -7,5 +7,6 @@ namespace ServiceHub.Services.Interfaces
     {
         Task NotifyProvider(NotificationDto notification);
         Task NotifyUser(NotificationDto notification);
+        Task NotifyAdmin(NotificationDto notification);
     }
 }
