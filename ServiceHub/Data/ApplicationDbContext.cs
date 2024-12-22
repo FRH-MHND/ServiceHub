@@ -19,6 +19,7 @@ namespace ServiceHub.Data
         public DbSet<Service> Services { get; set; }
         public DbSet<Booking> Bookings { get; set; }
         public DbSet<UserProfile> UserProfiles { get; set; }
+        public DbSet<Payment> Payments { get; set; }
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<FAQ> FAQs { get; set; }
         public DbSet<SupportContact> SupportContacts { get; set; }

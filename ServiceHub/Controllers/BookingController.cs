@@ -78,10 +78,10 @@ namespace ServiceHub.Controllers
             booking.Status = "Canceled";
             await _context.SaveChangesAsync();
 
-            var isLateCancellation = booking.AppointmentDate <= DateTime.UtcNow.AddHours(1); // Assuming 1 hour before the appointment is considered late
+            var isLateCancellation = booking.AppointmentDate <= DateTime.UtcNow.AddHours(1);
             if (isLateCancellation)
             {
-                LogLateCancellation(booking);
+                //LogLateCancellation(booking);
 
                 await _notificationService.NotifyUser(new NotificationDto
                 {

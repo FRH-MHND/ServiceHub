@@ -15,11 +15,13 @@ namespace ServiceHub.Services.Implementation
     {
         private readonly ApplicationDbContext _context;
         private readonly IEmailService _emailService;
+        private readonly ISmsService _smsService;
 
-        public UserService(ApplicationDbContext context, IEmailService emailService)
+        public UserService(ApplicationDbContext context, IEmailService emailService, ISmsService smsService)
         {
             _context = context;
             _emailService = emailService;
+            _smsService = smsService;
         }
 
         public async Task<bool> UserExists(string email, string phoneNumber)
@@ -102,7 +104,7 @@ namespace ServiceHub.Services.Implementation
             }
             else
             {
-                // Implement SMS sending logic here
+                await _smsService.SendSmsAsync("ServiceHub", identifier, $"Your verification code is {resetCode}");
             }
 
             return true;

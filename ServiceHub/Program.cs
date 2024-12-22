@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using ServiceHub.Data;
+using ServiceHub.Models;
 using ServiceHub.Services.Implementation;
 using ServiceHub.Services.Interfaces;
 
@@ -13,10 +14,13 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddScoped<IUserService, UserService>();
-builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddScoped<ISmsService, SmsService>();
 builder.Services.AddScoped<INotificationService, NotificationService>();
 builder.Services.AddScoped<ILoggingService, LoggingService>();
 builder.Services.AddScoped<IUserProfileService,UserProfileService>();
+builder.Services.AddScoped<IEmailService, EmailService>();
+
+
 builder.Services.AddScoped<PdfService>();
 
 

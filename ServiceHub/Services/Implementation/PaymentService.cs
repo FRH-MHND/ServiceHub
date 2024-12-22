@@ -1,4 +1,5 @@
-﻿using ServiceHub.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using ServiceHub.Data;
 using ServiceHub.DTOs;
 
 namespace ServiceHub.Services.Implementation

@@ -3,40 +3,84 @@
   "WorkspaceRootPath": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\PaymentController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\PaymentController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\services\\implementation\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:services\\implementation\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\controllers\\servicerequestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:controllers\\servicerequestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\services\\implementation\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:services\\implementation\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\models\\serviceprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:models\\serviceprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Services\\Interfaces\\IPaymentService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Services\\Interfaces\\IPaymentService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\dtos\\notificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:dtos\\notificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Models\\Payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\Payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\services\\interfaces\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:services\\interfaces\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\DTOs\\PaymentHistoryDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DTOs\\PaymentHistoryDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Services\\Implementation\\PaymentService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Services\\Implementation\\PaymentService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\services\\implementation\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:services\\implementation\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Services\\Implementation\\PdfService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Services\\Implementation\\PdfService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\services\\implementation\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:services\\implementation\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\services\\implementation\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:services\\implementation\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\services\\interfaces\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:services\\interfaces\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\models\\email.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:models\\email.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\services\\implementation\\notificationresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:services\\implementation\\notificationresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\services\\interfaces\\ismsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:services\\interfaces\\ismsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\services\\implementation\\smsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:services\\implementation\\smsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\controllers\\userdashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -47,16 +91,8 @@
       "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:servicehub.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\controllers\\providerdashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:controllers\\providerdashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\controllers\\servicerequestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:controllers\\servicerequestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\controllers\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -74,20 +110,8 @@
       "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\services\\interfaces\\iuserprofileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:services\\interfaces\\iuserprofileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\services\\implementation\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:services\\implementation\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\dtos\\notificationpreferencesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -102,16 +126,8 @@
       "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:models\\servicerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\services\\interfaces\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:services\\interfaces\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\dtos\\cancelbookingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:dtos\\cancelbookingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\models\\serviceprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:models\\serviceprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -120,10 +136,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\dtos\\servicedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:dtos\\servicedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\dtos\\notificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:dtos\\notificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -160,6 +172,18 @@
     {
       "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\dtos\\forgotpassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:dtos\\forgotpassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\services\\interfaces\\ipaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:services\\interfaces\\ipaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\services\\implementation\\pdfservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:services\\implementation\\pdfservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\dtos\\paymenthistorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:dtos\\paymenthistorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -173,45 +197,252 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EmailService.cs",
-              "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Services\\Implementation\\EmailService.cs",
-              "RelativeDocumentMoniker": "Services\\Implementation\\EmailService.cs",
-              "ToolTip": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Services\\Implementation\\EmailService.cs",
-              "RelativeToolTip": "Services\\Implementation\\EmailService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "NotificationService.cs",
+              "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Services\\Implementation\\NotificationService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementation\\NotificationService.cs",
+              "ToolTip": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Services\\Implementation\\NotificationService.cs",
+              "RelativeToolTip": "Services\\Implementation\\NotificationService.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAhwCoAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T12:39:17.58Z",
+              "WhenOpened": "2024-12-22T09:34:48.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T07:58:18.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ServiceProvider.cs",
+              "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Models\\ServiceProvider.cs",
+              "RelativeDocumentMoniker": "Models\\ServiceProvider.cs",
+              "ToolTip": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Models\\ServiceProvider.cs",
+              "RelativeToolTip": "Models\\ServiceProvider.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T08:51:48.984Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ServiceRequestController.cs",
+              "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\ServiceRequestController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ServiceRequestController.cs",
+              "ToolTip": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\ServiceRequestController.cs",
+              "RelativeToolTip": "Controllers\\ServiceRequestController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBEAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T08:10:35.67Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T08:41:42.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PaymentController.cs",
+              "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\PaymentController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PaymentController.cs",
+              "ToolTip": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\PaymentController.cs",
+              "RelativeToolTip": "Controllers\\PaymentController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAApwCUAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T09:44:40.908Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "NotificationDto.cs",
+              "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\DTOs\\NotificationDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\NotificationDto.cs",
+              "ToolTip": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\DTOs\\NotificationDto.cs",
+              "RelativeToolTip": "DTOs\\NotificationDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T08:12:13.475Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "INotificationService.cs",
+              "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Services\\Interfaces\\INotificationService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\INotificationService.cs",
+              "ToolTip": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Services\\Interfaces\\INotificationService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\INotificationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T09:33:41.739Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "PaymentService.cs",
               "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Services\\Implementation\\PaymentService.cs",
               "RelativeDocumentMoniker": "Services\\Implementation\\PaymentService.cs",
               "ToolTip": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Services\\Implementation\\PaymentService.cs",
               "RelativeToolTip": "Services\\Implementation\\PaymentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAApwCkAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T09:44:40.838Z"
+              "WhenOpened": "2024-12-17T09:44:40.838Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IPaymentService.cs",
-              "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Services\\Interfaces\\IPaymentService.cs",
-              "RelativeDocumentMoniker": "Services\\Interfaces\\IPaymentService.cs",
-              "ToolTip": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Services\\Interfaces\\IPaymentService.cs",
-              "RelativeToolTip": "Services\\Interfaces\\IPaymentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAACMAAAAAAAAAA==",
+              "DocumentIndex": 11,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Services\\Implementation\\UserService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementation\\UserService.cs",
+              "ToolTip": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Services\\Implementation\\UserService.cs",
+              "RelativeToolTip": "Services\\Implementation\\UserService.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowH4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T09:44:40.808Z",
+              "WhenOpened": "2024-12-22T09:21:00.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Services\\Implementation\\EmailService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementation\\EmailService.cs",
+              "ToolTip": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Services\\Implementation\\EmailService.cs",
+              "RelativeToolTip": "Services\\Implementation\\EmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T09:24:56.955Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IEmailService.cs",
+              "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Services\\Interfaces\\IEmailService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IEmailService.cs",
+              "ToolTip": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Services\\Interfaces\\IEmailService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IEmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T09:24:46.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Email.cs",
+              "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Models\\Email.cs",
+              "RelativeDocumentMoniker": "Models\\Email.cs",
+              "ToolTip": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Models\\Email.cs",
+              "RelativeToolTip": "Models\\Email.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T09:28:02.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Payment.cs",
+              "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Models\\Payment.cs",
+              "RelativeDocumentMoniker": "Models\\Payment.cs",
+              "ToolTip": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Models\\Payment.cs",
+              "RelativeToolTip": "Models\\Payment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T09:44:40.878Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T08:10:34.662Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "SmsService.cs",
+              "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Services\\Implementation\\SmsService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementation\\SmsService.cs",
+              "ToolTip": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Services\\Implementation\\SmsService.cs",
+              "RelativeToolTip": "Services\\Implementation\\SmsService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T08:55:53.161Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ISmsService.cs",
+              "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Services\\Interfaces\\ISmsService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\ISmsService.cs",
+              "ToolTip": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Services\\Interfaces\\ISmsService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\ISmsService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T09:07:48.024Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwCAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T08:10:39.286Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "NotificationResponse.cs",
+              "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Services\\Implementation\\NotificationResponse.cs",
+              "RelativeDocumentMoniker": "Services\\Implementation\\NotificationResponse.cs",
+              "ToolTip": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Services\\Implementation\\NotificationResponse.cs",
+              "RelativeToolTip": "Services\\Implementation\\NotificationResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T08:57:26.128Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
               "Title": "PdfService.cs",
               "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Services\\Implementation\\PdfService.cs",
               "RelativeDocumentMoniker": "Services\\Implementation\\PdfService.cs",
@@ -223,32 +454,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ServiceRequestController.cs",
-              "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\ServiceRequestController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ServiceRequestController.cs",
-              "ToolTip": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\ServiceRequestController.cs",
-              "RelativeToolTip": "Controllers\\ServiceRequestController.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAQwE4AAAAmAAAAAAAAAA==",
+              "DocumentIndex": 43,
+              "Title": "IPaymentService.cs",
+              "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Services\\Interfaces\\IPaymentService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IPaymentService.cs",
+              "ToolTip": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Services\\Interfaces\\IPaymentService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IPaymentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAACMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T08:10:35.67Z"
+              "WhenOpened": "2024-12-17T09:44:40.808Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 19,
               "Title": "BookingController.cs",
               "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\BookingController.cs",
               "RelativeDocumentMoniker": "Controllers\\BookingController.cs",
               "ToolTip": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\BookingController.cs",
               "RelativeToolTip": "Controllers\\BookingController.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAlwFMAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAhwFMAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-08T08:17:58.148Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 22,
               "Title": "ProviderDashboardController.cs",
               "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\ProviderDashboardController.cs",
               "RelativeDocumentMoniker": "Controllers\\ProviderDashboardController.cs",
@@ -256,24 +487,12 @@
               "RelativeToolTip": "Controllers\\ProviderDashboardController.cs",
               "ViewState": "AgIAAJ0AAAAAAAAAAAAQwK8AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T08:18:46.635Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PaymentController.cs",
-              "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\PaymentController.cs",
-              "RelativeDocumentMoniker": "Controllers\\PaymentController.cs",
-              "ToolTip": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\PaymentController.cs",
-              "RelativeToolTip": "Controllers\\PaymentController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAlwCEAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T09:44:40.908Z",
+              "WhenOpened": "2024-12-08T08:18:46.635Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 45,
               "Title": "PaymentHistoryDto.cs",
               "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\DTOs\\PaymentHistoryDto.cs",
               "RelativeDocumentMoniker": "DTOs\\PaymentHistoryDto.cs",
@@ -285,32 +504,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T07:58:18.933Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Payment.cs",
-              "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Models\\Payment.cs",
-              "RelativeDocumentMoniker": "Models\\Payment.cs",
-              "ToolTip": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Models\\Payment.cs",
-              "RelativeToolTip": "Models\\Payment.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T09:44:40.878Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 20,
               "Title": "UserDashboardController.cs",
               "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\UserDashboardController.cs",
               "RelativeDocumentMoniker": "Controllers\\UserDashboardController.cs",
@@ -318,11 +512,12 @@
               "RelativeToolTip": "Controllers\\UserDashboardController.cs",
               "ViewState": "AgIAAMsAAAAAAAAAAAAwwOgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T08:20:47.124Z"
+              "WhenOpened": "2024-12-08T08:20:47.124Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 23,
               "Title": "ServiceController.cs",
               "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\ServiceController.cs",
               "RelativeDocumentMoniker": "Controllers\\ServiceController.cs",
@@ -334,19 +529,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
-              "ToolTip": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "Controllers\\AdminController.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAQwEEAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T08:10:34.662Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 21,
               "Title": "ServiceHub.csproj",
               "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\ServiceHub.csproj",
               "RelativeDocumentMoniker": "ServiceHub.csproj",
@@ -358,7 +541,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 24,
               "Title": "Microsoft.Common.CurrentVersion.targets",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
@@ -370,7 +553,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 25,
               "Title": "UserProfileService.cs",
               "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Services\\Implementation\\UserProfileService.cs",
               "RelativeDocumentMoniker": "Services\\Implementation\\UserProfileService.cs",
@@ -382,7 +565,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 26,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
@@ -394,19 +577,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAhwB8AAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T08:41:42.614Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 27,
               "Title": "IUserProfileService.cs",
               "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Services\\Interfaces\\IUserProfileService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IUserProfileService.cs",
@@ -414,23 +585,12 @@
               "RelativeToolTip": "Services\\Interfaces\\IUserProfileService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T09:15:35.15Z"
+              "WhenOpened": "2024-12-10T09:15:35.15Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "NotificationService.cs",
-              "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Services\\Implementation\\NotificationService.cs",
-              "RelativeDocumentMoniker": "Services\\Implementation\\NotificationService.cs",
-              "ToolTip": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Services\\Implementation\\NotificationService.cs",
-              "RelativeToolTip": "Services\\Implementation\\NotificationService.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAowAMAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T08:39:57.725Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 28,
               "Title": "NotificationPreferencesDto.cs",
               "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\DTOs\\NotificationPreferencesDto.cs",
               "RelativeDocumentMoniker": "DTOs\\NotificationPreferencesDto.cs",
@@ -442,19 +602,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAIAwwCEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T08:10:39.286Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 29,
               "Title": "UserProfile.cs",
               "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Models\\UserProfile.cs",
               "RelativeDocumentMoniker": "Models\\UserProfile.cs",
@@ -466,7 +614,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 31,
               "Title": "CancelBookingDto.cs",
               "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\DTOs\\CancelBookingDto.cs",
               "RelativeDocumentMoniker": "DTOs\\CancelBookingDto.cs",
@@ -478,19 +626,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "ServiceProvider.cs",
-              "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Models\\ServiceProvider.cs",
-              "RelativeDocumentMoniker": "Models\\ServiceProvider.cs",
-              "ToolTip": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Models\\ServiceProvider.cs",
-              "RelativeToolTip": "Models\\ServiceProvider.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T08:51:48.984Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 30,
               "Title": "ServiceRequest.cs",
               "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Models\\ServiceRequest.cs",
               "RelativeDocumentMoniker": "Models\\ServiceRequest.cs",
@@ -502,19 +638,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "INotificationService.cs",
-              "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Services\\Interfaces\\INotificationService.cs",
-              "RelativeDocumentMoniker": "Services\\Interfaces\\INotificationService.cs",
-              "ToolTip": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Services\\Interfaces\\INotificationService.cs",
-              "RelativeToolTip": "Services\\Interfaces\\INotificationService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T08:40:13.309Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 32,
               "Title": "Service.cs",
               "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Models\\Service.cs",
               "RelativeDocumentMoniker": "Models\\Service.cs",
@@ -526,7 +650,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 33,
               "Title": "ServiceDto.cs",
               "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\DTOs\\ServiceDto.cs",
               "RelativeDocumentMoniker": "DTOs\\ServiceDto.cs",
@@ -538,7 +662,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 34,
               "Title": "Booking.cs",
               "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Models\\Booking.cs",
               "RelativeDocumentMoniker": "Models\\Booking.cs",
@@ -550,7 +674,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 35,
               "Title": "RescheduleBookingDto.cs",
               "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\DTOs\\RescheduleBookingDto.cs",
               "RelativeDocumentMoniker": "DTOs\\RescheduleBookingDto.cs",
@@ -562,19 +686,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "NotificationDto.cs",
-              "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\DTOs\\NotificationDto.cs",
-              "RelativeDocumentMoniker": "DTOs\\NotificationDto.cs",
-              "ToolTip": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\DTOs\\NotificationDto.cs",
-              "RelativeToolTip": "DTOs\\NotificationDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T08:12:13.475Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 36,
               "Title": "BookingDto.cs",
               "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\DTOs\\BookingDto.cs",
               "RelativeDocumentMoniker": "DTOs\\BookingDto.cs",
@@ -586,7 +698,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 37,
               "Title": "UserProfileDto.cs",
               "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\DTOs\\UserProfileDto.cs",
               "RelativeDocumentMoniker": "DTOs\\UserProfileDto.cs",
@@ -598,7 +710,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 39,
               "Title": "ServiceHistoryDto.cs",
               "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\DTOs\\ServiceHistoryDto.cs",
               "RelativeDocumentMoniker": "DTOs\\ServiceHistoryDto.cs",
@@ -610,7 +722,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 40,
               "Title": "LoginUserDto.cs",
               "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\DTOs\\LoginUserDto.cs",
               "RelativeDocumentMoniker": "DTOs\\LoginUserDto.cs",
@@ -622,7 +734,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 38,
               "Title": "ServiceProviderDTO.cs",
               "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\DTOs\\ServiceProviderDTO.cs",
               "RelativeDocumentMoniker": "DTOs\\ServiceProviderDTO.cs",
@@ -634,7 +746,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 41,
               "Title": "RegisterUserDto.cs",
               "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\DTOs\\RegisterUserDto.cs",
               "RelativeDocumentMoniker": "DTOs\\RegisterUserDto.cs",
@@ -646,7 +758,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 42,
               "Title": "ForgotPasswordDto.cs",
               "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\DTOs\\ForgotPasswordDto.cs",
               "RelativeDocumentMoniker": "DTOs\\ForgotPasswordDto.cs",
