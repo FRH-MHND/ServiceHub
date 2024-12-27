@@ -1,0 +1,74 @@
+## Ignore build results
+bin/
+obj/
+
+## Ignore user-specific files
+.vs/
+.vs2019/
+.vs2017/
+.idea/
+
+## User-specific files
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+## Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+## Windows Installer patch files
+*.wixpdb
+
+## Ignore ASP.NET temp files
+App_Data/
+
+## JetBrains Rider specific files
+.idea/
+
+## User-specific files for Visual Studio Code
+.vscode/
+
+## NuGet package files
+*.nupkg
+# The packages folder can be ignored because it is recreated when needed
+packages/
+
+## Ignore any directory named "TestResults"
+TestResults/
+
+## Ignore IIS Express config files
+/.vsconfig
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows Installer patch files
+*.wixpdb
+
+# Azure Functions build output
+local.settings.json
+
+# Ignore coverage results
+*.coverage
+*.coveragexml
+*.opencover.xml
+
+# Ignore backup files
+*~
+*.bak
+*.swp
+
+# Ignore log files
+*.log
+
+# Ignore generated files
+*.dll
+*.exe
+*.pdb
