@@ -1,45 +1,55 @@
-﻿using ServiceHub.Services.Interfaces;
+﻿using System;
+using System.Threading.Tasks;
+using Twilio;
+using Twilio.Rest.Verify.V2.Service;
+using ServiceHub.Services.Interfaces;
 
 namespace ServiceHub.Services.Implementation
 {
     public class SmsService : ISmsService
     {
+        private readonly string _accountSid = "ACd6105dc31246d570ac419c761e6ece2c";
+        private readonly string _authToken = "ce76d061a904858795b24f1c4c4ba689";
+        private readonly string _serviceSid = "VA7fe282aa2b94b0b0cae537f63b0ad4d4";
+
+        public SmsService()
+        {
+            TwilioClient.Init(_accountSid, _authToken);
+        }
+
         public async Task<NotificationResponse> SendSmsAsync(string serviceProviderName, string phoneNumber, string messageBody)
         {
-            // Ensure phone number format
-            if (phoneNumber.Contains("+"))
+            try
             {
-                phoneNumber = phoneNumber.Replace("+", "");
-            }
-            try { 
-                        return await SendViaJOSMS(phoneNumber, messageBody);
-                   
-                }
-            catch (Exception ex) { 
-                // Error handling with detailed message
+                // Use Twilio Verify's VerificationResource to send the SMS
+                var verification = await VerificationResource.CreateAsync(
+                    to: phoneNumber, // Dynamic phone number passed as a parameter
+                    channel: "sms", // Using SMS channel
+                    pathServiceSid: _serviceSid // Verify service SID
+                );
+
+                // Return success response with verification SID
                 return new NotificationResponse
                 {
-                    StatusCode = "500",
-                    Message = $"Exception occurred: {ex.Message}"
+                    ResponseStatusCode = "200",
+                    ResponseMessage = $"Verification sent successfully. SID: {verification.Sid}"
+                };
+            }
+            catch (Exception ex)
+            {
+                // Handle errors and return failure response
+                return new NotificationResponse
+                {
+                    ResponseStatusCode = "500",
+                    ResponseMessage = $"Exception occurred: {ex.Message}"
                 };
             }
         }
-        private async Task<NotificationResponse> SendViaJOSMS(string phoneNumber, string messageBody)
-        {
-            using HttpClient client = new();
-            string url = $"eyJhbGciOiJIUzI1NiJ9.eyJpZCI6ImU0N2ExYzM2LTQwZjYtNGRhMi05YTk1LTkyMjFmMDAwZDNkMyIsImlhdCI6MTczNDg1ODI1NywiaXNzIjoyMTE2NH0.R7bCXWLk5yluAeulhOqaofT5_XnRevz3ki_d2Min5gU";
-            var request = new HttpRequestMessage(HttpMethod.Get, url);
+    }
 
-            HttpResponseMessage response = await client.SendAsync(request);
-            string responseContent = await response.Content.ReadAsStringAsync();
-
-            return new NotificationResponse
-            {
-                StatusCode = response.IsSuccessStatusCode ? "200" : "422",
-                Message = responseContent,
-                ProviderRequestBody = url,
-                ProviderResponseBody = responseContent
-            };
-        }
+    public class NotificationResponse
+    {
+        public string ResponseStatusCode { get; set; }
+        public string ResponseMessage { get; set; }
     }
 }
