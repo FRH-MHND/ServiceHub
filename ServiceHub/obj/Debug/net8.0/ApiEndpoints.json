@@ -86,6 +86,38 @@
   },
   {
     "ContainingType": "ServiceHub.Controllers.AdminController",
+    "Method": "RegisterProvider",
+    "RelativePath": "api/Admin/register/provider",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "providerRegistrationDto",
+        "Type": "ServiceHub.DTOs.ProviderRegistrationDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ServiceHub.Controllers.AdminController",
+    "Method": "RegisterUser",
+    "RelativePath": "api/Admin/register/user",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userRegistrationDto",
+        "Type": "ServiceHub.DTOs.UserRegistrationDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ServiceHub.Controllers.AdminController",
     "Method": "RejectServiceProvider",
     "RelativePath": "api/Admin/reject/{id}",
     "HttpMethod": "POST",

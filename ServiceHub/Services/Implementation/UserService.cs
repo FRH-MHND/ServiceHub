@@ -22,9 +22,9 @@ namespace ServiceHub.Services.Implementation
 			_smsService = smsService;
 		}
 
-		public async Task<bool> UserExists(string email, string phoneNumber)
+		public async Task<bool> UserExists(string phoneNumber)
 		{
-			return await _context.Users.AnyAsync(u => u.Email == email || u.PhoneNumber == phoneNumber);
+			return await _context.Users.AnyAsync(u => u.PhoneNumber == phoneNumber);
 		}
 
 		public string HashPassword(string password)

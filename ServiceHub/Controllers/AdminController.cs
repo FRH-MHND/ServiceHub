@@ -2,7 +2,9 @@
 using Microsoft.AspNetCore.Mvc;
 using ServiceHub.Data;
 using ServiceHub.DTOs;
+using ServiceHub.Models;
 using ServiceHub.Services.Interfaces;
+using System.Threading.Tasks;
 
 namespace ServiceHub.Controllers
 {
@@ -13,9 +15,9 @@ namespace ServiceHub.Controllers
         private readonly IUserService _userService;
         private readonly ApplicationDbContext _context;
         private readonly INotificationService _notificationService;
-		private readonly IMapper _mapper;
+        private readonly IMapper _mapper;
 
-		public AdminController(IUserService userService, ApplicationDbContext context, INotificationService notificationService)
+        public AdminController(IUserService userService, ApplicationDbContext context, INotificationService notificationService)
         {
             _userService = userService;
             _context = context;
@@ -38,6 +40,58 @@ namespace ServiceHub.Controllers
 
             var token = await _userService.GenerateJwtToken(admin);
             return Ok(new { Token = token, Admin = admin });
+        }
+
+        [HttpPost("register/user")]
+        public async Task<IActionResult> RegisterUser(UserRegistrationDto userRegistrationDto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if (await _userService.UserExists(userRegistrationDto.PhoneNumber))
+            {
+                return BadRequest("User with the same email or phone number already exists.");
+            }
+
+            var user = new User
+            {
+                Name = userRegistrationDto.Name,
+                PhoneNumber = userRegistrationDto.PhoneNumber,
+                PasswordHash = _userService.HashPassword(userRegistrationDto.Password)
+            };
+
+            await _userService.CreateUser(user);
+            return Ok(user);
+        }
+
+        [HttpPost("register/provider")]
+        public async Task<IActionResult> RegisterProvider(ProviderRegistrationDto providerRegistrationDto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if (await _userService.UserExists(providerRegistrationDto.PhoneNumber))
+            {
+                return BadRequest("Provider with the same email or phone number already exists.");
+            }
+
+            var provider = new Models.ServiceProvider
+            {
+                Name = providerRegistrationDto.Name,
+                PhoneNumber = providerRegistrationDto.PhoneNumber,
+                PasswordHash = _userService.HashPassword(providerRegistrationDto.Password),
+                ServiceCategory = providerRegistrationDto.ServiceCategory,
+                Status = "Pending"
+            };
+
+            _context.ServiceProviders.Add(provider);
+            await _context.SaveChangesAsync();
+
+            return Ok(provider);
         }
 
         [HttpPost("approve/{id}")]

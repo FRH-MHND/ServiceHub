@@ -7,7 +7,7 @@ namespace ServiceHub.Services.Interfaces
 {
 	public interface IUserService
 	{
-		Task<bool> UserExists(string email, string phoneNumber);
+		Task<bool> UserExists(string phoneNumber);
 		string HashPassword(string password);
 		string GenerateVerificationCode();
 		Task CreateUser(User user);
