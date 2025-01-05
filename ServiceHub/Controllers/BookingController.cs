@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ServiceHub.Data;
 using ServiceHub.DTOs;
@@ -14,8 +15,9 @@ namespace ServiceHub.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly INotificationService _notificationService;
+		private readonly IMapper _mapper;
 
-        public BookingController(ApplicationDbContext context, INotificationService notificationService)
+		public BookingController(ApplicationDbContext context, INotificationService notificationService)
         {
             _context = context;
             _notificationService = notificationService;

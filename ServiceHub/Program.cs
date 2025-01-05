@@ -19,10 +19,7 @@ builder.Services.AddScoped<ISmsService, SmsService>();
 builder.Services.AddScoped<INotificationService, NotificationService>();
 builder.Services.AddScoped<ILoggingService, LoggingService>();
 builder.Services.AddScoped<IUserProfileService, UserProfileService>();
-builder.Services.AddScoped<IEmailService, EmailService>();
 
-var emailSettings = builder.Configuration.GetSection("Email").Get<Email>();
-builder.Services.AddSingleton(emailSettings);
 
 builder.Services.AddScoped<PdfService>();
 

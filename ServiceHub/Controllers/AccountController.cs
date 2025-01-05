@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using ServiceHub.DTOs;
 using ServiceHub.Services.Interfaces;
 
@@ -9,10 +10,12 @@ namespace ServiceHub.Controllers
     public class AccountController : ControllerBase
     {
         private readonly IUserService _userService;
+		private readonly IMapper _mapper;
 
-        public AccountController(IUserService userService)
+		public AccountController(IUserService userService)
         {
             _userService = userService;
+
         }
 
         [HttpPost("login")]

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ServiceHub.Data;
 using ServiceHub.DTOs;
@@ -10,8 +11,9 @@ namespace ServiceHub.Controllers
     public class ServiceController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
+		private readonly IMapper _mapper;
 
-        public ServiceController(ApplicationDbContext context)
+		public ServiceController(ApplicationDbContext context)
         {
             _context = context;
         }

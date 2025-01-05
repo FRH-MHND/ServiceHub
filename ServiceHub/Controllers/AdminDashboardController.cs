@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ServiceHub.Data;
@@ -17,8 +18,9 @@ namespace ServiceHub.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly ILoggingService _loggingService;
+		private readonly IMapper _mapper;
 
-        public AdminDashboardController(ApplicationDbContext context, ILoggingService loggingService)
+		public AdminDashboardController(ApplicationDbContext context, ILoggingService loggingService)
         {
             _context = context;
             _loggingService = loggingService;

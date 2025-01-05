@@ -1,4 +1,5 @@
 ﻿using System.Security.Claims;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ServiceHub.Data;
@@ -15,8 +16,9 @@ namespace ServiceHub.Controllers
         private readonly PaymentService _paymentService;
         private readonly PdfService _pdfService;
         private readonly ApplicationDbContext _context;
+		private readonly IMapper _mapper;
 
-        public PaymentController(PaymentService paymentService, PdfService pdfService, ApplicationDbContext context)
+		public PaymentController(PaymentService paymentService, PdfService pdfService, ApplicationDbContext context)
         {
             _paymentService = paymentService;
             _pdfService = pdfService;

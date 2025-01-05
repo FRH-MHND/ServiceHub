@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using ServiceHub.Data;
 using ServiceHub.DTOs;
 using ServiceHub.Services.Interfaces;
@@ -12,8 +13,9 @@ namespace ServiceHub.Controllers
         private readonly IUserService _userService;
         private readonly ApplicationDbContext _context;
         private readonly INotificationService _notificationService;
+		private readonly IMapper _mapper;
 
-        public AdminController(IUserService userService, ApplicationDbContext context, INotificationService notificationService)
+		public AdminController(IUserService userService, ApplicationDbContext context, INotificationService notificationService)
         {
             _userService = userService;
             _context = context;

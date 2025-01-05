@@ -1,5 +1,6 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using ServiceHub.Services.Implementation;
 
@@ -9,8 +10,9 @@ public class UserController : ControllerBase
 {
     private readonly UserProfileService _userProfileService;
     private readonly NotificationService _notificationService;
+	private readonly IMapper _mapper;
 
-    public UserController(UserProfileService userProfileService, NotificationService notificationService)
+	public UserController(UserProfileService userProfileService, NotificationService notificationService)
     {
         _userProfileService = userProfileService;
         _notificationService = notificationService;

@@ -11,32 +11,30 @@ using ServiceHub.Services.Interfaces;
 
 namespace ServiceHub.Services.Implementation
 {
-    public class UserService : IUserService
-    {
-        private readonly ApplicationDbContext _context;
-        private readonly IEmailService _emailService;
-        private readonly ISmsService _smsService;
+	public class UserService : IUserService
+	{
+		private readonly ApplicationDbContext _context;
+		private readonly ISmsService _smsService;
 
-        public UserService(ApplicationDbContext context, IEmailService emailService, ISmsService smsService)
-        {
-            _context = context;
-            _emailService = emailService;
-            _smsService = smsService;
-        }
+		public UserService(ApplicationDbContext context, ISmsService smsService)
+		{
+			_context = context;
+			_smsService = smsService;
+		}
 
-        public async Task<bool> UserExists(string email, string phoneNumber)
-        {
-            return await _context.Users.AnyAsync(u => u.Email == email || u.PhoneNumber == phoneNumber);
-        }
+		public async Task<bool> UserExists(string email, string phoneNumber)
+		{
+			return await _context.Users.AnyAsync(u => u.Email == email || u.PhoneNumber == phoneNumber);
+		}
 
-        public string HashPassword(string password)
-        {
-            using var sha256 = SHA256.Create();
-            var bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-            return Convert.ToBase64String(bytes);
-        }
+		public string HashPassword(string password)
+		{
+			using var sha256 = SHA256.Create();
+			var bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+			return Convert.ToBase64String(bytes);
+		}
 
-        public string GenerateVerificationCode()
+		public string GenerateVerificationCode()
         {
             return new Random().Next(100000, 999999).ToString();
         }
@@ -98,14 +96,9 @@ namespace ServiceHub.Services.Implementation
             user.VerificationCode = resetCode;
             await _context.SaveChangesAsync();
 
-            if (identifier.Contains("@"))
-            {
-                await _emailService.SendVerificationCode(identifier, resetCode);
-            }
-            else
-            {
-                await _smsService.SendSmsAsync("ServiceHub", identifier, $"Your verification code is {resetCode}");
-            }
+           
+            await _smsService.SendSmsAsync("ServiceHub", identifier, $"Your verification code is {resetCode}");
+            
 
             return true;
         }

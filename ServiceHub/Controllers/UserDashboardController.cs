@@ -6,6 +6,7 @@ using ServiceHub.Services.Interfaces;
 using System.Threading.Tasks;
 using System.Linq;
 using ServiceHub.Models;
+using AutoMapper;
 
 namespace ServiceHub.Controllers
 {
@@ -15,8 +16,9 @@ namespace ServiceHub.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly INotificationService _notificationService;
+		private readonly IMapper _mapper;
 
-        public UserDashboardController(ApplicationDbContext context, INotificationService notificationService)
+		public UserDashboardController(ApplicationDbContext context, INotificationService notificationService)
         {
             _context = context;
             _notificationService = notificationService;
