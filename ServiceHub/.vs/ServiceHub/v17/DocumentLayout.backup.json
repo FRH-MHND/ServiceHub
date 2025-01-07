@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\services\\implementation\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:services\\implementation\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\dtos\\providerregistrationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:dtos\\providerregistrationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\f.aljawad\\desktop\\sh\\servicehub\\servicehub\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -209,17 +209,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 382,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "AdminController.cs",
               "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
               "ToolTip": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\AdminController.cs",
               "RelativeToolTip": "Controllers\\AdminController.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAADgv1YAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAEUAAAAAAAAAAAArwFYAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-08T08:10:34.662Z",
               "EditorCaption": ""
@@ -234,12 +234,11 @@
               "RelativeToolTip": "Data\\ApplicationDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T08:10:39.286Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-08T08:10:39.286Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ServiceProvider.cs",
               "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Models\\ServiceProvider.cs",
               "RelativeDocumentMoniker": "Models\\ServiceProvider.cs",
@@ -247,12 +246,11 @@
               "RelativeToolTip": "Models\\ServiceProvider.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T08:51:48.984Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-08T08:51:48.984Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ProviderRegistrationDto.cs",
               "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\DTOs\\ProviderRegistrationDto.cs",
               "RelativeDocumentMoniker": "DTOs\\ProviderRegistrationDto.cs",
@@ -260,12 +258,11 @@
               "RelativeToolTip": "DTOs\\ProviderRegistrationDto.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T13:25:16.775Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T13:25:16.775Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Service.cs",
               "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Models\\Service.cs",
               "RelativeDocumentMoniker": "Models\\Service.cs",
@@ -273,8 +270,7 @@
               "RelativeToolTip": "Models\\Service.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T08:43:05.121Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-08T08:43:05.121Z"
             },
             {
               "$type": "Document",
@@ -286,8 +282,7 @@
               "RelativeToolTip": "Services\\Interfaces\\IUserService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T19:38:58.113Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T19:38:58.113Z"
             },
             {
               "$type": "Document",
@@ -299,18 +294,17 @@
               "RelativeToolTip": "Data\\MappingProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T11:51:07.362Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T11:51:07.362Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Services\\Implementation\\UserService.cs",
               "RelativeDocumentMoniker": "Services\\Implementation\\UserService.cs",
               "ToolTip": "C:\\Users\\f.aljawad\\Desktop\\SH\\ServiceHub\\ServiceHub\\Services\\Implementation\\UserService.cs",
               "RelativeToolTip": "Services\\Implementation\\UserService.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAIBYwBoAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAA6wBoAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-22T09:21:00.035Z",
               "EditorCaption": ""
@@ -325,8 +319,7 @@
               "RelativeToolTip": "Models\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T13:42:23.985Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T13:42:23.985Z"
             },
             {
               "$type": "Document",
@@ -338,8 +331,7 @@
               "RelativeToolTip": "DTOs\\UserRegistrationDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T13:26:59.637Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T13:26:59.637Z"
             },
             {
               "$type": "Document",
@@ -351,8 +343,7 @@
               "RelativeToolTip": "Controllers\\ServiceRequestController.cs",
               "ViewState": "AgIAACsAAAAAAAAAAAAgwBEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T08:10:35.67Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-08T08:10:35.67Z"
             },
             {
               "$type": "Document",
@@ -364,8 +355,7 @@
               "RelativeToolTip": "Controllers\\UserController.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T08:41:42.614Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T08:41:42.614Z"
             },
             {
               "$type": "Document",
@@ -377,8 +367,7 @@
               "RelativeToolTip": "Controllers\\ServiceController.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T08:35:01.131Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T08:35:01.131Z"
             },
             {
               "$type": "Document",
@@ -390,8 +379,7 @@
               "RelativeToolTip": "DTOs\\PaymentHistoryDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T09:44:40.858Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-17T09:44:40.858Z"
             },
             {
               "$type": "Document",
@@ -403,8 +391,7 @@
               "RelativeToolTip": "Controllers\\ProviderDashboardController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T08:18:46.635Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-08T08:18:46.635Z"
             },
             {
               "$type": "Document",
@@ -416,8 +403,7 @@
               "RelativeToolTip": "Controllers\\BookingController.cs",
               "ViewState": "AgIAADwAAAAAAAAAAAAowA4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T08:17:58.148Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-08T08:17:58.148Z"
             },
             {
               "$type": "Document",
@@ -429,8 +415,7 @@
               "RelativeToolTip": "ServiceHub.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-12-08T07:58:49.28Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-08T07:58:49.28Z"
             },
             {
               "$type": "Document",
@@ -442,8 +427,7 @@
               "RelativeToolTip": "Services\\Implementation\\SmsService.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAAwDEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T08:55:53.161Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-22T08:55:53.161Z"
             },
             {
               "$type": "Document",
@@ -467,8 +451,7 @@
               "RelativeToolTip": "Controllers\\AccountController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T19:36:59.224Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T19:36:59.224Z"
             },
             {
               "$type": "Document",
@@ -480,8 +463,7 @@
               "RelativeToolTip": "Controllers\\UserDashboardController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAIBJwBMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T08:20:47.124Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-08T08:20:47.124Z"
             },
             {
               "$type": "Document",
@@ -541,8 +523,7 @@
               "RelativeToolTip": "Services\\Implementation\\NotificationService.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAxwD8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T09:34:48.532Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-22T09:34:48.532Z"
             },
             {
               "$type": "Document",
@@ -554,8 +535,7 @@
               "RelativeToolTip": "Services\\Interfaces\\INotificationService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T09:33:41.739Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-22T09:33:41.739Z"
             },
             {
               "$type": "Document",
@@ -819,8 +799,7 @@
               "RelativeToolTip": "DTOs\\LoginUserDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T08:12:15.051Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-08T08:12:15.051Z"
             },
             {
               "$type": "Document",
@@ -832,8 +811,7 @@
               "RelativeToolTip": "DTOs\\ForgotPasswordDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T08:12:11.412Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-08T08:12:11.412Z"
             }
           ]
         },
