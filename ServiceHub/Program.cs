@@ -7,9 +7,12 @@ using ServiceHub.Data;
 using ServiceHub.Models;
 using ServiceHub.Services.Implementation;
 using ServiceHub.Services.Interfaces;
-
+using Microsoft.AspNetCore.Cors;
 var builder = WebApplication.CreateBuilder(args);
-
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.ListenAnyIP(5196); // Bind to all network interfaces on port 5196
+});
 // Add services to the container.
 builder.Services.AddControllers();
 // Configure MariaDB connection
@@ -78,7 +81,19 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
+
 var app = builder.Build();
+
+app.UseCors("AllowAll");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -93,4 +108,6 @@ app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
 
+
+app.MapControllers();
 app.Run();

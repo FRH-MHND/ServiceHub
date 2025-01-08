@@ -1,12 +1,11 @@
 {
   "Version": 1,
-  "Hash": "Y0txJdPDSsWgF2/V6LA3DRsAhSQGkpyVikb+arQIqbI=",
+  "Hash": "A1+Qc/wibSrY2S3GsXhkTbLUt8rIblFAfGuudrbEb14=",
   "Source": "ServiceHub",
   "BasePath": "_content/ServiceHub",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "Assets": []
 }

@@ -45,6 +45,7 @@ namespace ServiceHub.Controllers
         [HttpPost("register/user")]
         public async Task<IActionResult> RegisterUser(UserRegistrationDto userRegistrationDto)
         {
+            Console.WriteLine("seen");
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
@@ -64,6 +65,7 @@ namespace ServiceHub.Controllers
 
             await _userService.CreateUser(user);
             return Ok(user);
+            Console.WriteLine("registered");
         }
 
         [HttpPost("register/provider")]
