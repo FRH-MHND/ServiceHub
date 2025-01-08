@@ -68,7 +68,7 @@ namespace ServiceHub.Services.Implementation
         public async Task<string> GenerateJwtToken(User user)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes("YourSecretKeyHere"); // Replace with your secret key
+            var key = Encoding.ASCII.GetBytes("YourNewSecretKeyYourNewSecretKey12"); // Make sure this is 32 bytes long
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new[]

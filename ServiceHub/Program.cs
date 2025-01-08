@@ -81,10 +81,7 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
-builder.WebHost.ConfigureKestrel(options =>
-{
-    options.ListenAnyIP(5196); // Listen on all network interfaces
-});
+
 
 builder.Services.AddCors(options =>
 {
