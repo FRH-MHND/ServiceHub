@@ -39,15 +39,9 @@ namespace ServiceHub.Services.Implementation
             return new Random().Next(100000, 999999).ToString();
         }
 
-        public async Task CreateUser(User user)
-        {
-            _context.Users.Add(user);
-            await _context.SaveChangesAsync();
-        }
-
         public async Task<User?> AuthenticateUser(string identifier, string password)
         {
-            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == identifier || u.PhoneNumber == identifier);
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.PhoneNumber == identifier);
             if (user == null || user.PasswordHash != HashPassword(password))
             {
                 return null;
@@ -55,7 +49,27 @@ namespace ServiceHub.Services.Implementation
             return user;
         }
 
-        public async Task<User?> AuthenticateAdmin(string email, string password)
+		public async Task<bool> VerifyCodeAsync(string phoneNumber, string code)
+		{
+			var user = await _context.Users.FirstOrDefaultAsync(u => u.PhoneNumber == phoneNumber);
+			if (user == null)
+			{
+				return false;
+			}
+
+			return user.VerificationCode == code;
+		}
+
+		public async Task CreateUser(User user)
+		{
+			user.VerificationCode = GenerateVerificationCode();
+			_context.Users.Add(user);
+			await _context.SaveChangesAsync();
+
+			var messageBody = $"Your verification code is {user.VerificationCode}";
+			await _smsService.SendSmsAsync("ServiceHub", user.PhoneNumber, messageBody);
+		}
+		public async Task<User?> AuthenticateAdmin(string email, string password)
         {
             var admin = await _context.Users.FirstOrDefaultAsync(u => u.Email == email && u.IsAdmin);
             if (admin == null || admin.PasswordHash != HashPassword(password))

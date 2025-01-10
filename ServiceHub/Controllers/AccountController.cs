@@ -53,7 +53,19 @@ namespace ServiceHub.Controllers
             return Ok("Password reset code sent.");
         }
 
-        [HttpPost("reset-password")]
+		[HttpPost("verify-code")]
+		public async Task<IActionResult> VerifyCode(string phoneNumber, string code)
+		{
+			var isValid = await _userService.VerifyCodeAsync(phoneNumber, code);
+			if (!isValid)
+			{
+				return BadRequest("Invalid verification code.");
+			}
+
+			return Ok("Verification successful.");
+		}
+
+		[HttpPost("reset-password")]
         public async Task<IActionResult> ResetPassword(string identifier, string newPassword)
         {
             var result = await _userService.ResetPassword(identifier, newPassword);

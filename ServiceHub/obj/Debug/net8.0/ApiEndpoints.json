@@ -53,6 +53,27 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ServiceHub.Controllers.AccountController",
+    "Method": "VerifyCode",
+    "RelativePath": "api/Account/verify-code",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "phoneNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ServiceHub.Controllers.AdminController",
     "Method": "ApproveServiceProvider",
     "RelativePath": "api/Admin/approve/{id}",

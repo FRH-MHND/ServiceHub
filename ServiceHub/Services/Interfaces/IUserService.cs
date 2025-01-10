@@ -11,6 +11,7 @@ namespace ServiceHub.Services.Interfaces
 		string HashPassword(string password);
 		string GenerateVerificationCode();
 		Task CreateUser(User user);
+		Task<bool> VerifyCodeAsync(string phoneNumber, string code);
 		Task<User?> AuthenticateUser(string identifier, string password);
 		Task<User?> AuthenticateAdmin(string email, string password);
 		Task<string> GenerateJwtToken(User user);
