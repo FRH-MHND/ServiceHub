@@ -69,35 +69,44 @@ namespace ServiceHub.Controllers
             Console.WriteLine("registered");
         }
 
-        [HttpPost("register/provider")]
-        public async Task<IActionResult> RegisterProvider(ProviderRegistrationDto providerRegistrationDto)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+		[HttpPost("register/provider")]
+		public async Task<IActionResult> RegisterProvider(ProviderRegistrationDto providerRegistrationDto)
+		{
+			if (!ModelState.IsValid)
+			{
+				return BadRequest(ModelState);
+			}
 
-            if (await _userService.UserExists(providerRegistrationDto.PhoneNumber))
-            {
-                return BadRequest("Provider with the same email or phone number already exists.");
-            }
+			if (await _userService.UserExists(providerRegistrationDto.PhoneNumber))
+			{
+				return BadRequest("Provider with the same email or phone number already exists.");
+			}
 
-            var provider = new Models.ServiceProvider
-            {
-                Name = providerRegistrationDto.Name,
-                PhoneNumber = providerRegistrationDto.PhoneNumber,
-                PasswordHash = _userService.HashPassword(providerRegistrationDto.Password),
-                ServiceCategory = providerRegistrationDto.ServiceCategory,
-                Status = "Pending"
-            };
+			var serviceCategory = await _context.ServiceCategories
+				.FirstOrDefaultAsync(sc => sc.Name == providerRegistrationDto.ServiceCategory);
 
-            _context.ServiceProviders.Add(provider);
-            await _context.SaveChangesAsync();
+			if (serviceCategory == null)
+			{
+				return BadRequest("Invalid service category.");
+			}
 
-            return Ok(provider);
-        }
+			var provider = new Models.ServiceProvider
+			{
+				Name = providerRegistrationDto.Name,
+				PhoneNumber = providerRegistrationDto.PhoneNumber,
+				PasswordHash = _userService.HashPassword(providerRegistrationDto.Password),
+				ServiceCategory = serviceCategory,
+				Status = "Pending"
+			};
 
-        [HttpPost("approve/{id}")]
+			_context.ServiceProviders.Add(provider);
+			await _context.SaveChangesAsync();
+
+			return Ok(provider);
+		}
+
+
+		[HttpPost("approve/{id}")]
         public async Task<IActionResult> ApproveServiceProvider(int id)
         {
             var serviceProvider = await _context.ServiceProviders.FindAsync(id);
@@ -173,6 +182,7 @@ namespace ServiceHub.Controllers
 		public async Task<IActionResult> GetProviderDetails(int id)
 		{
 			var provider = await _context.ServiceProviders
+				.Include(p => p.ServiceCategory)
 				.AsNoTracking()
 				.FirstOrDefaultAsync(p => p.Id == id);
 
@@ -186,12 +196,13 @@ namespace ServiceHub.Controllers
 				Id = provider.Id,
 				Name = provider.Name,
 				PhoneNumber = provider.PhoneNumber,
-				ServiceCategory = provider.ServiceCategory,
+				ServiceCategory = provider.ServiceCategory.Name,
 				Status = provider.Status,
 				AvailabilityStatus = provider.AvailabilityStatus
 			};
 
 			return Ok(providerDto);
 		}
+
 	}
 }

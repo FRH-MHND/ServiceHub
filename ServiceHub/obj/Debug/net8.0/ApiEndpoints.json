@@ -387,6 +387,27 @@
   },
   {
     "ContainingType": "ServiceHub.Controllers.ProviderDashboardController",
+    "Method": "UpdateAboutMe",
+    "RelativePath": "api/ProviderDashboard/about-me/{providerId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "providerId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "aboutMe",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ServiceHub.Controllers.ProviderDashboardController",
     "Method": "AcceptBooking",
     "RelativePath": "api/ProviderDashboard/accept",
     "HttpMethod": "POST",
@@ -580,6 +601,22 @@
     "Parameters": [
       {
         "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ServiceHub.Controllers.ServiceController",
+    "Method": "GetProvidersByServiceId",
+    "RelativePath": "api/Service/{serviceId}/providers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "serviceId",
         "Type": "System.Int32",
         "IsRequired": true
       }

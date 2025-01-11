@@ -3,6 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ServiceHub.Data;
 using ServiceHub.DTOs;
+using ServiceHub.Models;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace ServiceHub.Controllers
 {
@@ -55,8 +58,37 @@ namespace ServiceHub.Controllers
 			}
 
 			var serviceDto = _mapper.Map<ServiceDto>(service);
-
 			return Ok(serviceDto);
+		}
+
+		[HttpGet("{serviceId}/providers")]
+		public async Task<IActionResult> GetProvidersByServiceId(int serviceId)
+		{
+			var service = await _context.Services
+				.Include(s => s.Category)
+				.FirstOrDefaultAsync(s => s.Id == serviceId);
+
+			if (service == null)
+			{
+				return NotFound("Service not found.");
+			}
+
+			var providers = await _context.ServiceProviders
+				.Where(p => p.ServiceCategory.Name == service.Category)
+				.ToListAsync();
+
+			var providerDtos = providers.Select(p => new ServiceProviderDto
+			{
+				Id = p.Id,
+				Name = p.Name,
+				PhoneNumber = p.PhoneNumber,
+				AvailabilityStatus = p.AvailabilityStatus,
+				Status = p.Status,
+				AverageRating = p.AverageRating,
+				AboutMe = p.AboutMe
+			}).ToList();
+
+			return Ok(providerDtos);
 		}
 	}
 }

@@ -3,20 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\user\\desktop\\sh\\servicehub\\servicehub\\controllers\\admindashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:controllers\\admindashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\user\\desktop\\sh\\servicehub\\servicehub\\migrations\\20250111224154_addservicecategorytable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:migrations\\20250111224154_addservicecategorytable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\user\\desktop\\sh\\servicehub\\servicehub\\services\\implementation\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:services\\implementation\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\user\\desktop\\sh\\servicehub\\servicehub\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\user\\desktop\\sh\\servicehub\\servicehub\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\user\\desktop\\sh\\servicehub\\servicehub\\models\\servicecategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:models\\servicecategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\user\\desktop\\sh\\servicehub\\servicehub\\models\\serviceprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:models\\serviceprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\user\\desktop\\sh\\servicehub\\servicehub\\controllers\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:controllers\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\user\\desktop\\sh\\servicehub\\servicehub\\models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\user\\desktop\\sh\\servicehub\\servicehub\\controllers\\servicerequestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:controllers\\servicerequestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\user\\desktop\\sh\\servicehub\\servicehub\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\user\\desktop\\sh\\servicehub\\servicehub\\data\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,16 +43,20 @@
       "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:controllers\\providerdashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\user\\desktop\\sh\\servicehub\\servicehub\\controllers\\admindashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:controllers\\admindashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\user\\desktop\\sh\\servicehub\\servicehub\\services\\implementation\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:services\\implementation\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\user\\desktop\\sh\\servicehub\\servicehub\\dtos\\serviceproviderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:dtos\\serviceproviderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\user\\desktop\\sh\\servicehub\\servicehub\\dtos\\providerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:dtos\\providerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\user\\desktop\\sh\\servicehub\\servicehub\\models\\serviceprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|solutionrelative:models\\serviceprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1BE0918F-E421-428E-817F-7EEB1AD05094}|ServiceHub.csproj|c:\\users\\user\\desktop\\sh\\servicehub\\servicehub\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -78,7 +98,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 722,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,46 +106,85 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "Controllers\\AdminController.cs",
-              "ViewState": "AgIAAIQAAAAAAAAAAAAcwI8AAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-11T19:39:27.148Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AdminDashboardController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\AdminDashboardController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AdminDashboardController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\AdminDashboardController.cs",
-              "RelativeToolTip": "Controllers\\AdminDashboardController.cs",
-              "ViewState": "AgIAAFkAAAAAAAAAAAAswHkAAAAAAAAAAAAAAA==",
+              "Title": "20250111224154_AddServiceCategoryTable.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\Migrations\\20250111224154_AddServiceCategoryTable.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250111224154_AddServiceCategoryTable.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\Migrations\\20250111224154_AddServiceCategoryTable.cs",
+              "RelativeToolTip": "Migrations\\20250111224154_AddServiceCategoryTable.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAAAEEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-11T20:57:54.614Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ServiceProviderDTO.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\DTOs\\ServiceProviderDTO.cs",
-              "RelativeDocumentMoniker": "DTOs\\ServiceProviderDTO.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\DTOs\\ServiceProviderDTO.cs",
-              "RelativeToolTip": "DTOs\\ServiceProviderDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-11T20:53:55.161Z",
+              "WhenOpened": "2025-01-11T22:42:18.281Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "ServiceController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\ServiceController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ServiceController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\ServiceController.cs",
+              "RelativeToolTip": "Controllers\\ServiceController.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAAwEsAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T21:00:38.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Service.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\Models\\Service.cs",
+              "RelativeDocumentMoniker": "Models\\Service.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\Models\\Service.cs",
+              "RelativeToolTip": "Models\\Service.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T22:24:34.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ServiceProvider.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\Models\\ServiceProvider.cs",
+              "RelativeDocumentMoniker": "Models\\ServiceProvider.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\Models\\ServiceProvider.cs",
+              "RelativeToolTip": "Models\\ServiceProvider.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAzwAwAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T20:52:27.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ServiceCategory.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\Models\\ServiceCategory.cs",
+              "RelativeDocumentMoniker": "Models\\ServiceCategory.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\Models\\ServiceCategory.cs",
+              "RelativeToolTip": "Models\\ServiceCategory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T22:27:18.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\Data\\ApplicationDbContext.cs*",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs*",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAxwA8AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T22:22:12.629Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "MappingProfile.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\Data\\MappingProfile.cs",
               "RelativeDocumentMoniker": "Data\\MappingProfile.cs",
@@ -138,7 +197,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
+              "ViewState": "AgIAAK8AAAAAAAAAAAAwwM0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T19:39:27.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ServiceRequestController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\ServiceRequestController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ServiceRequestController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\ServiceRequestController.cs",
+              "RelativeToolTip": "Controllers\\ServiceRequestController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T22:30:22.732Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProviderDashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\ProviderDashboardController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProviderDashboardController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\ProviderDashboardController.cs",
+              "RelativeToolTip": "Controllers\\ProviderDashboardController.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAkwEkAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T20:54:35.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\Services\\Implementation\\UserService.cs",
               "RelativeDocumentMoniker": "Services\\Implementation\\UserService.cs",
@@ -151,46 +249,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ServiceController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\ServiceController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ServiceController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\ServiceController.cs",
-              "RelativeToolTip": "Controllers\\ServiceController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 12,
+              "Title": "ServiceProviderDTO.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\DTOs\\ServiceProviderDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\ServiceProviderDTO.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\DTOs\\ServiceProviderDTO.cs",
+              "RelativeToolTip": "DTOs\\ServiceProviderDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-11T21:00:38.054Z",
+              "WhenOpened": "2025-01-11T20:53:55.161Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ProviderDashboardController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\ProviderDashboardController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProviderDashboardController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\ProviderDashboardController.cs",
-              "RelativeToolTip": "Controllers\\ProviderDashboardController.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAkwEwAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "AdminDashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\AdminDashboardController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminDashboardController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\AdminDashboardController.cs",
+              "RelativeToolTip": "Controllers\\AdminDashboardController.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAswHkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-11T20:54:35.223Z",
+              "WhenOpened": "2025-01-11T20:57:54.614Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ServiceProvider.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\Models\\ServiceProvider.cs",
-              "RelativeDocumentMoniker": "Models\\ServiceProvider.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\Models\\ServiceProvider.cs",
-              "RelativeToolTip": "Models\\ServiceProvider.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-11T20:52:27.835Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "ProviderDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\DTOs\\ProviderDto.cs",
               "RelativeDocumentMoniker": "DTOs\\ProviderDto.cs",
@@ -203,7 +288,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
@@ -216,7 +301,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -229,7 +314,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -242,7 +327,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "IUserService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\Services\\Interfaces\\IUserService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IUserService.cs",
@@ -255,7 +340,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "LoginUserDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\DTOs\\LoginUserDto.cs",
               "RelativeDocumentMoniker": "DTOs\\LoginUserDto.cs",
@@ -268,7 +353,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 19,
               "Title": "ProviderRegistrationDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\DTOs\\ProviderRegistrationDto.cs",
               "RelativeDocumentMoniker": "DTOs\\ProviderRegistrationDto.cs",
@@ -281,7 +366,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 20,
               "Title": "AllUsersProvidersDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\DTOs\\AllUsersProvidersDto.cs",
               "RelativeDocumentMoniker": "DTOs\\AllUsersProvidersDto.cs",
@@ -294,7 +379,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 21,
               "Title": "ServiceDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\SH\\ServiceHub\\ServiceHub\\DTOs\\ServiceDto.cs",
               "RelativeDocumentMoniker": "DTOs\\ServiceDto.cs",

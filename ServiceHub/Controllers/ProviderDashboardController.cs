@@ -57,6 +57,21 @@ namespace ServiceHub.Controllers
 
 			return Ok(provider);
 		}
+		[HttpPut("about-me/{providerId}")]
+		public async Task<IActionResult> UpdateAboutMe(int providerId, [FromBody] string aboutMe)
+		{
+			var provider = await _context.ServiceProviders.FindAsync(providerId);
+			if (provider == null)
+			{
+				return NotFound();
+			}
+
+			provider.AboutMe = aboutMe;
+			_context.ServiceProviders.Update(provider);
+			await _context.SaveChangesAsync();
+
+			return Ok(provider);
+		}
 
 		[HttpGet("services/{providerId}")]
 		public async Task<IActionResult> GetProviderServices(int providerId)
