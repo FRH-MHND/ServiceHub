@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using ServiceHub.DTOs;
 using ServiceHub.Models;
+using ServiceProvider = ServiceHub.Models.ServiceProvider;
 
 public class MappingProfile : Profile
 {
@@ -12,5 +13,10 @@ public class MappingProfile : Profile
 		CreateMap<User, UserRegistrationDto>().ReverseMap();
 		CreateMap<Booking, BookingStatusDto>().ReverseMap();
 		CreateMap<Booking, CancelBookingDto>().ReverseMap();
+		CreateMap<ServiceProvider, ProviderDto>().ReverseMap();
+		CreateMap<User, UserProfileDto>();
+		CreateMap<ServiceProvider, ServiceProviderDto>();
+		CreateMap<UserProfile, UserProfileDto>().ReverseMap();
+		CreateMap<Service, ServiceDto>().ReverseMap();
 	}
 }

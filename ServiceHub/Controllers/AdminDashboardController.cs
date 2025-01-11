@@ -11,151 +11,111 @@ using System.Threading.Tasks;
 
 namespace ServiceHub.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    [Authorize(Roles = "Admin")]
-    public class AdminDashboardController : ControllerBase
-    {
-        private readonly ApplicationDbContext _context;
-        private readonly ILoggingService _loggingService;
+	[ApiController]
+	[Route("api/[controller]")]
+	[Authorize(Roles = "Admin")]
+	public class AdminDashboardController : ControllerBase
+	{
+		private readonly ApplicationDbContext _context;
+		private readonly ILoggingService _loggingService;
 		private readonly IMapper _mapper;
 
-		public AdminDashboardController(ApplicationDbContext context, ILoggingService loggingService)
-        {
-            _context = context;
-            _loggingService = loggingService;
-        }
+		public AdminDashboardController(ApplicationDbContext context, ILoggingService loggingService, IMapper mapper)
+		{
+			_context = context;
+			_loggingService = loggingService;
+			_mapper = mapper;
+		}
 
-        [HttpGet("users")]
-        public async Task<IActionResult> GetAllUsers([FromQuery] string search = "", [FromQuery] int page = 1, [FromQuery] int pageSize = 10)
-        {
-            var query = _context.UserProfiles.AsQueryable();
+		[HttpGet("users/{userId}")]
+		public async Task<IActionResult> GetUserDetails(int userId)
+		{
+			var user = await _context.UserProfiles.FindAsync(userId);
+			if (user == null)
+			{
+				return NotFound();
+			}
 
-            if (!string.IsNullOrEmpty(search))
-            {
-                query = query.Where(u => u.Name.Contains(search) || u.Email.Contains(search) || u.PhoneNumber.Contains(search));
-            }
+			var userDto = _mapper.Map<UserProfileDto>(user);
+			return Ok(userDto);
+		}
 
-            var users = await query
-                .Skip((page - 1) * pageSize)
-                .Take(pageSize)
-                .ToListAsync();
+		[HttpPost("users/{userId}")]
+		public async Task<IActionResult> UpdateUserProfile(int userId, [FromBody] UserProfileDto userProfileDto)
+		{
+			var user = await _context.UserProfiles.FindAsync(userId);
+			if (user == null)
+			{
+				return NotFound();
+			}
 
-            return Ok(users);
-        }
+			_mapper.Map(userProfileDto, user);
+			await _context.SaveChangesAsync();
 
-        [HttpGet("users/{userId}")]
-        public async Task<IActionResult> GetUserDetails(int userId)
-        {
-            var user = await _context.UserProfiles.FindAsync(userId);
-            if (user == null)
-            {
-                return NotFound();
-            }
+			return Ok();
+		}
 
-            return Ok(user);
-        }
+		[HttpPost("users/{userId}/deactivate")]
+		public async Task<IActionResult> DeactivateUser(int userId)
+		{
+			var user = await _context.UserProfiles.FindAsync(userId);
+			if (user == null)
+			{
+				return NotFound();
+			}
 
-        [HttpPost("users/{userId}")]
-        public async Task<IActionResult> UpdateUserProfile(int userId, [FromBody] UserProfileDto userProfileDto)
-        {
-            var user = await _context.UserProfiles.FindAsync(userId);
-            if (user == null)
-            {
-                return NotFound();
-            }
+			user.IsActive = false;
+			await _context.SaveChangesAsync();
 
-            user.Name = userProfileDto.Name;
-            user.Email = userProfileDto.Email;
-            user.PhoneNumber = userProfileDto.PhoneNumber;
-            user.AccountSettings = userProfileDto.AccountSettings;
+			return Ok();
+		}
 
-            await _context.SaveChangesAsync();
+		[HttpGet("services")]
+		public async Task<IActionResult> GetAllServices()
+		{
+			var services = await _context.Services.ToListAsync();
+			var serviceDtos = _mapper.Map<List<ServiceDto>>(services);
+			return Ok(serviceDtos);
+		}
 
-            await _loggingService.LogAdminAction(User.Identity.Name, $"Updated profile for user {userId}");
+		[HttpPost("services")]
+		public async Task<IActionResult> AddService([FromBody] ServiceDto serviceDto)
+		{
+			var service = _mapper.Map<Service>(serviceDto);
+			_context.Services.Add(service);
+			await _context.SaveChangesAsync();
 
-            return Ok(user);
-        }
+			return CreatedAtAction(nameof(GetAllServices), new { id = service.Id }, serviceDto);
+		}
 
-        [HttpPost("users/{userId}/deactivate")]
-        public async Task<IActionResult> DeactivateUser(int userId)
-        {
-            var user = await _context.UserProfiles.FindAsync(userId);
-            if (user == null)
-            {
-                return NotFound();
-            }
+		[HttpPut("services/{serviceId}")]
+		public async Task<IActionResult> UpdateService(int serviceId, [FromBody] ServiceDto serviceDto)
+		{
+			var service = await _context.Services.FindAsync(serviceId);
+			if (service == null)
+			{
+				return NotFound();
+			}
 
-            user.IsActive = false;
-            await _context.SaveChangesAsync();
+			_mapper.Map(serviceDto, service);
+			await _context.SaveChangesAsync();
 
-            await _loggingService.LogAdminAction(User.Identity.Name, $"Deactivated user {userId}");
+			return Ok();
+		}
 
-            return Ok();
-        }
+		[HttpDelete("services/{serviceId}")]
+		public async Task<IActionResult> DeleteService(int serviceId)
+		{
+			var service = await _context.Services.FindAsync(serviceId);
+			if (service == null)
+			{
+				return NotFound();
+			}
 
-        [HttpGet("services")]
-        public async Task<IActionResult> GetAllServices()
-        {
-            var services = await _context.Services.ToListAsync();
-            return Ok(services);
-        }
+			_context.Services.Remove(service);
+			await _context.SaveChangesAsync();
 
-        [HttpPost("services")]
-        public async Task<IActionResult> AddService([FromBody] ServiceDto serviceDto)
-        {
-            var service = new Service
-            {
-                Name = serviceDto.Name,
-                Category = serviceDto.Category,
-                Description = serviceDto.Description,
-                Price = serviceDto.Price
-            };
-
-            _context.Services.Add(service);
-            await _context.SaveChangesAsync();
-
-            await _loggingService.LogAdminAction(User.Identity.Name, $"Added service {service.Name}");
-
-            return Ok(service);
-        }
-
-        [HttpPut("services/{serviceId}")]
-        public async Task<IActionResult> UpdateService(int serviceId, [FromBody] ServiceDto serviceDto)
-        {
-            var service = await _context.Services.FindAsync(serviceId);
-            if (service == null)
-            {
-                return NotFound();
-            }
-
-            service.Name = serviceDto.Name;
-            service.Category = serviceDto.Category;
-            service.Description = serviceDto.Description;
-            service.Price = serviceDto.Price;
-
-            await _context.SaveChangesAsync();
-
-            await _loggingService.LogAdminAction(User.Identity.Name, $"Updated service {service.Name}");
-
-            return Ok(service);
-        }
-
-        [HttpDelete("services/{serviceId}")]
-        public async Task<IActionResult> DeleteService(int serviceId)
-        {
-            var service = await _context.Services.FindAsync(serviceId);
-            if (service == null)
-            {
-                return NotFound();
-            }
-
-            _context.Services.Remove(service);
-            await _context.SaveChangesAsync();
-
-            await _loggingService.LogAdminAction(User.Identity.Name, $"Deleted service {service.Name}");
-
-            return Ok();
-        }
-    }
+			return NoContent();
+		}
+	}
 }

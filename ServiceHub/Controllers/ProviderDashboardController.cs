@@ -10,21 +10,23 @@ using System.Threading.Tasks;
 
 namespace ServiceHub.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class ProviderDashboardController : ControllerBase
-    {
-        private readonly ApplicationDbContext _context;
-        private readonly INotificationService _notificationService;
+	[ApiController]
+	[Route("api/[controller]")]
+	public class ProviderDashboardController : ControllerBase
+	{
+		private readonly ApplicationDbContext _context;
+		private readonly INotificationService _notificationService;
 		private readonly IMapper _mapper;
 
-		public ProviderDashboardController(ApplicationDbContext context, INotificationService notificationService)
-        {
-            _context = context;
-            _notificationService = notificationService;
-        }
+		public ProviderDashboardController(ApplicationDbContext context, INotificationService notificationService, IMapper mapper)
+		{
+			_context = context;
+			_notificationService = notificationService;
+			_mapper = mapper;
+		}
 
-        [HttpGet("bookings")]
+
+		[HttpGet("bookings")]
         public async Task<IActionResult> GetBookings(int providerId)
         {
             var bookings = await _context.Bookings
@@ -37,32 +39,44 @@ namespace ServiceHub.Controllers
             return Ok(categorizedBookings);
         }
 
-        [HttpPost("status")]
-        public async Task<IActionResult> UpdateProviderStatus(int providerId, [FromBody] string status)
-        {
-            var provider = await _context.ServiceProviders.FindAsync(providerId);
-            if (provider == null)
-            {
-                return NotFound("Service provider not found.");
-            }
-            if (status != "Available" && status != "Busy" && status != "Offline")
-            {
-                return BadRequest("Invalid status.");
-            }
+		[HttpPost("status")]
+		public async Task<IActionResult> UpdateProviderStatus(int providerId, [FromBody] string status)
+		{
+			var provider = await _context.ServiceProviders.FindAsync(providerId);
+			if (provider == null)
+			{
+				return NotFound("Service provider not found.");
+			}
+			if (status != "Available" && status != "Busy" && status != "Offline")
+			{
+				return BadRequest("Invalid status.");
+			}
 
-            provider.AvailabilityStatus = status;
-            await _context.SaveChangesAsync();
+			provider.AvailabilityStatus = status;
+			await _context.SaveChangesAsync();
 
-            await _notificationService.NotifyProvider(new NotificationDto
-            {
-                RequestId = provider.Id,
-                Message = $"Your availability status has been updated to {status}."
-            });
+			return Ok(provider);
+		}
 
-            return Ok(provider);
-        }
+		[HttpGet("services/{providerId}")]
+		public async Task<IActionResult> GetProviderServices(int providerId)
+		{
+			var services = await _context.Services
+				.Where(s => s.ServiceProviderId == providerId)
+				.ToListAsync();
 
-        [HttpPost("accept")]
+			var provider = await _context.ServiceProviders.FindAsync(providerId);
+			if (provider == null)
+			{
+				return NotFound("Service provider not found.");
+			}
+
+			var providerDto = _mapper.Map<ServiceProviderDto>(provider);
+			return Ok(new { Provider = providerDto, Services = services });
+		}
+
+
+		[HttpPost("accept")]
         public async Task<IActionResult> AcceptBooking([FromBody] BookingStatusDto bookingStatusDto)
         {
             var booking = await _context.Bookings.FindAsync(bookingStatusDto.BookingId);
@@ -185,15 +199,5 @@ namespace ServiceHub.Controllers
 
             return Ok();
         }
-
-        [HttpGet("services/{providerId}")]
-        public async Task<IActionResult> GetProviderServices(int providerId)
-        {
-            var services = await _context.Services
-                .Where(s => s.ServiceProviderId == providerId)
-                .ToListAsync();
-
-            return Ok(services);
-        }
-    }
+	}
 }

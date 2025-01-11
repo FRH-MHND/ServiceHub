@@ -1,4 +1,6 @@
-﻿using System.Security.Cryptography;
+﻿#nullable enable
+
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
@@ -8,6 +10,7 @@ using ServiceHub.Models;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using ServiceHub.Services.Interfaces;
+using ServiceProvider = ServiceHub.Models.ServiceProvider;
 
 namespace ServiceHub.Services.Implementation
 {
@@ -30,24 +33,34 @@ namespace ServiceHub.Services.Implementation
 		public string HashPassword(string password)
 		{
 			using var sha256 = SHA256.Create();
-			var bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-			return Convert.ToBase64String(bytes);
+			var hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+			return BitConverter.ToString(hashedBytes).Replace("-", "").ToLower();
 		}
 
 		public string GenerateVerificationCode()
-        {
-            return new Random().Next(100000, 999999).ToString();
-        }
+		{
+			return new Random().Next(100000, 999999).ToString();
+		}
 
-        public async Task<User?> AuthenticateUser(string identifier, string password)
-        {
-            var user = await _context.Users.FirstOrDefaultAsync(u => u.PhoneNumber == identifier);
-            if (user == null || user.PasswordHash != HashPassword(password))
-            {
-                return null;
-            }
-            return user;
-        }
+		public async Task<User?> AuthenticateUser(string identifier, string password)
+		{
+			var user = await _context.Users.FirstOrDefaultAsync(u => u.PhoneNumber == identifier);
+			if (user == null || user.PasswordHash != HashPassword(password))
+			{
+				return null;
+			}
+			return user;
+		}
+
+		public async Task<ServiceProvider?> AuthenticateProvider(string identifier, string password)
+		{
+			var provider = await _context.ServiceProviders.FirstOrDefaultAsync(p => p.PhoneNumber == identifier);
+			if (provider == null || provider.PasswordHash != HashPassword(password))
+			{
+				return null;
+			}
+			return provider;
+		}
 
 		public async Task<bool> VerifyCodeAsync(string phoneNumber, string code)
 		{
@@ -69,65 +82,81 @@ namespace ServiceHub.Services.Implementation
 			var messageBody = $"Your verification code is {user.VerificationCode}";
 			await _smsService.SendSmsAsync("ServiceHub", user.PhoneNumber, messageBody);
 		}
+
 		public async Task<User?> AuthenticateAdmin(string email, string password)
-        {
-            var admin = await _context.Users.FirstOrDefaultAsync(u => u.Email == email && u.IsAdmin);
-            if (admin == null || admin.PasswordHash != HashPassword(password))
-            {
-                return null;
-            }
-            return admin;
-        }
+		{
+			var admin = await _context.Users.FirstOrDefaultAsync(u => u.Email == email && u.IsAdmin);
+			if (admin == null || admin.PasswordHash != HashPassword(password))
+			{
+				return null;
+			}
+			return admin;
+		}
 
-        public async Task<string> GenerateJwtToken(User user)
-        {
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes("YourNewSecretKeyYourNewSecretKey12"); // Make sure this is 32 bytes long
-            var tokenDescriptor = new SecurityTokenDescriptor
-            {
-                Subject = new ClaimsIdentity(new[]
-                {
-                    new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                    new Claim(ClaimTypes.Name, user.Name),
-                    new Claim(ClaimTypes.Role, user.IsAdmin ? "Admin" : "User")
-                }),
-                Expires = DateTime.UtcNow.AddMinutes(45), // Session expiration time
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
-            };
-            var token = tokenHandler.CreateToken(tokenDescriptor);
-            return tokenHandler.WriteToken(token);
-        }
+		public Task<string> GenerateJwtToken(User user)
+		{
+			var tokenHandler = new JwtSecurityTokenHandler();
+			var key = Encoding.ASCII.GetBytes("your_secret_key_here");
+			var tokenDescriptor = new SecurityTokenDescriptor
+			{
+				Subject = new ClaimsIdentity(new[]
+				{
+					new Claim(ClaimTypes.Name, user.Name),
+					new Claim(ClaimTypes.Role, "User")
+				}),
+				Expires = DateTime.UtcNow.AddMinutes(45),
+				SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+			};
+			var token = tokenHandler.CreateToken(tokenDescriptor);
+			return Task.FromResult(tokenHandler.WriteToken(token));
+		}
 
-        public async Task<bool> SendPasswordResetCode(string identifier)
-        {
-            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == identifier || u.PhoneNumber == identifier);
-            if (user == null)
-            {
-                return false;
-            }
+		public Task<string> GenerateJwtToken(ServiceProvider provider)
+		{
+			var tokenHandler = new JwtSecurityTokenHandler();
+			var key = Encoding.ASCII.GetBytes("your_secret_key_here");
+			var tokenDescriptor = new SecurityTokenDescriptor
+			{
+				Subject = new ClaimsIdentity(new[]
+				{
+					new Claim(ClaimTypes.Name, provider.Name),
+					new Claim(ClaimTypes.Role, "Provider")
+				}),
+				Expires = DateTime.UtcNow.AddMinutes(45),
+				SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+			};
+			var token = tokenHandler.CreateToken(tokenDescriptor);
+			return Task.FromResult(tokenHandler.WriteToken(token));
+		}
 
-            var resetCode = GenerateVerificationCode();
-            user.VerificationCode = resetCode;
-            await _context.SaveChangesAsync();
+		public async Task<bool> SendPasswordResetCode(string identifier)
+		{
+			var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == identifier || u.PhoneNumber == identifier);
+			if (user == null)
+			{
+				return false;
+			}
 
-           
-            await _smsService.SendSmsAsync("ServiceHub", identifier, $"Your verification code is {resetCode}");
-            
+			var resetCode = GenerateVerificationCode();
+			user.VerificationCode = resetCode;
+			await _context.SaveChangesAsync();
 
-            return true;
-        }
+			await _smsService.SendSmsAsync("ServiceHub", identifier, $"Your verification code is {resetCode}");
 
-        public async Task<bool> ResetPassword(string identifier, string newPassword)
-        {
-            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == identifier || u.PhoneNumber == identifier);
-            if (user == null)
-            {
-                return false;
-            }
+			return true;
+		}
 
-            user.PasswordHash = HashPassword(newPassword);
-            await _context.SaveChangesAsync();
-            return true;
-        }
-    }
+		public async Task<bool> ResetPassword(string identifier, string newPassword)
+		{
+			var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == identifier || u.PhoneNumber == identifier);
+			if (user == null)
+			{
+				return false;
+			}
+
+			user.PasswordHash = HashPassword(newPassword);
+			await _context.SaveChangesAsync();
+			return true;
+		}
+	}
 }

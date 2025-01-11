@@ -75,6 +75,16 @@
   },
   {
     "ContainingType": "ServiceHub.Controllers.AdminController",
+    "Method": "GetAllUsersAndProviders",
+    "RelativePath": "api/Admin/all-users-providers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ServiceHub.Controllers.AdminController",
     "Method": "ApproveServiceProvider",
     "RelativePath": "api/Admin/approve/{id}",
     "HttpMethod": "POST",
@@ -100,6 +110,38 @@
       {
         "Name": "adminLoginDto",
         "Type": "ServiceHub.DTOs.AdminLoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ServiceHub.Controllers.AdminController",
+    "Method": "GetProviderDetails",
+    "RelativePath": "api/Admin/provider-details/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ServiceHub.Controllers.AdminController",
+    "Method": "GetProviderStatus",
+    "RelativePath": "api/Admin/provider-status/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
@@ -212,32 +254,6 @@
         "Name": "serviceId",
         "Type": "System.Int32",
         "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ServiceHub.Controllers.AdminDashboardController",
-    "Method": "GetAllUsers",
-    "RelativePath": "api/AdminDashboard/users",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "search",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "page",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "pageSize",
-        "Type": "System.Int32",
-        "IsRequired": false
       }
     ],
     "ReturnTypes": []

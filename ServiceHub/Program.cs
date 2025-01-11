@@ -21,13 +21,15 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
         builder.Configuration.GetConnectionString("DefaultConnection"),
         new MySqlServerVersion(new Version(10, 6, 18)) 
     ));
+// Register AutoMapper
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<ISmsService, SmsService>();
 builder.Services.AddScoped<INotificationService, NotificationService>();
 builder.Services.AddScoped<ILoggingService, LoggingService>();
 builder.Services.AddScoped<IUserProfileService, UserProfileService>();
-
+builder.Services.AddScoped<IUserProfileService, UserProfileService>();
 
 builder.Services.AddScoped<PdfService>();
 

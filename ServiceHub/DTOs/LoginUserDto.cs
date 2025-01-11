@@ -9,5 +9,8 @@ namespace ServiceHub.DTOs
 
         [Required]
         public string Password { get; set; }
-    }
+
+        [Required]
+		public string UserType { get; set; }
+	}
 }

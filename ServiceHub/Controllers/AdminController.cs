@@ -1,30 +1,31 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ServiceHub.Data;
 using ServiceHub.DTOs;
 using ServiceHub.Models;
 using ServiceHub.Services.Interfaces;
-using System.Threading.Tasks;
 
 namespace ServiceHub.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class AdminController : ControllerBase
-    {
-        private readonly IUserService _userService;
-        private readonly ApplicationDbContext _context;
-        private readonly INotificationService _notificationService;
-        private readonly IMapper _mapper;
+	[ApiController]
+	[Route("api/[controller]")]
+	public class AdminController : ControllerBase
+	{
+		private readonly IUserService _userService;
+		private readonly ApplicationDbContext _context;
+		private readonly INotificationService _notificationService;
+		private readonly IMapper _mapper;
 
-        public AdminController(IUserService userService, ApplicationDbContext context, INotificationService notificationService)
-        {
-            _userService = userService;
-            _context = context;
-            _notificationService = notificationService;
-        }
+		public AdminController(IUserService userService, ApplicationDbContext context, INotificationService notificationService, IMapper mapper)
+		{
+			_userService = userService;
+			_context = context;
+			_notificationService = notificationService;
+			_mapper = mapper;
+		}
 
-        [HttpPost("login")]
+		[HttpPost("login")]
         public async Task<IActionResult> Login(AdminLoginDto adminLoginDto)
         {
             if (!ModelState.IsValid)
@@ -137,5 +138,60 @@ namespace ServiceHub.Controllers
 
             return Ok(serviceProvider);
         }
-    }
+		[HttpGet("all-users-providers")]
+		public async Task<IActionResult> GetAllUsersAndProviders()
+		{
+			var users = await _context.Users.ToListAsync();
+			var providers = await _context.ServiceProviders.ToListAsync();
+
+			var userDtos = _mapper.Map<List<UserProfileDto>>(users);
+			var providerDtos = _mapper.Map<List<ProviderDto>>(providers);
+
+			var result = new AllUsersProvidersDto
+			{
+				Users = userDtos,
+				Providers = providerDtos
+			};
+
+			return Ok(result);
+		}
+
+
+		[HttpGet("provider-status/{id}")]
+		public async Task<IActionResult> GetProviderStatus(int id)
+		{
+			var provider = await _context.ServiceProviders.FindAsync(id);
+			if (provider == null)
+			{
+				return NotFound("Service provider not found.");
+			}
+
+			return Ok(new { provider.Id, provider.Name, provider.Status });
+		}
+
+		[HttpGet("provider-details/{id}")]
+		public async Task<IActionResult> GetProviderDetails(int id)
+		{
+			var provider = await _context.ServiceProviders
+				.AsNoTracking()
+				.FirstOrDefaultAsync(p => p.Id == id);
+
+			if (provider == null)
+			{
+				return NotFound("Service provider not found.");
+			}
+
+			var providerDto = new ProviderDetailsDto
+			{
+				Id = provider.Id,
+				Name = provider.Name,
+				PhoneNumber = provider.PhoneNumber,
+				ServiceCategory = provider.ServiceCategory,
+				Status = provider.Status,
+				AvailabilityStatus = provider.AvailabilityStatus
+			};
+
+			return Ok(providerDto);
+		}
+	}
 }

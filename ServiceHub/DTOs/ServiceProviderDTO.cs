@@ -11,7 +11,8 @@
         public string PhoneNumber { get; set; }
         public string AvailabilityStatus { get; set; }
         public string Status { get; set; }
-        public double AverageRating { get; set; } 
-    }
+        public double AverageRating { get; set; }
+		public string AboutMe { get; set; }
+	}
 
 }
