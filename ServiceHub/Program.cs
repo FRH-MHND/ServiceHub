@@ -85,15 +85,16 @@ builder.Services.AddSwaggerGen(c =>
 
 
 
-builder.Services.AddCors(options =>
+ void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 {
-    options.AddPolicy("AllowAll", policy =>
-    {
-        policy.AllowAnyOrigin()
-              .AllowAnyMethod()
-              .AllowAnyHeader();
-    });
-});
+    app.UseCors(options =>
+        options.AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader());
+    app.UseRouting();
+    app.UseEndpoints(endpoints => endpoints.MapControllers());
+}
+
 
 var app = builder.Build();
 

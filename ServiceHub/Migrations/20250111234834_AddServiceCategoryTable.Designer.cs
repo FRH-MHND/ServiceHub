@@ -12,7 +12,7 @@ using ServiceHub.Data;
 namespace ServiceHub.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250111230821_AddServiceCategoryTable")]
+    [Migration("20250111234834_AddServiceCategoryTable")]
     partial class AddServiceCategoryTable
     {
         /// <inheritdoc />

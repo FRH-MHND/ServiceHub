@@ -61,12 +61,12 @@ namespace ServiceHub.Controllers
 			return Ok(serviceDto);
 		}
 
-		[HttpGet("{serviceId}/providers")]
-		public async Task<IActionResult> GetProvidersByServiceId(int serviceId)
+		[HttpGet("providers/{serviceName}")]
+		public async Task<IActionResult> GetProvidersByServiceName(string serviceName)
 		{
 			var service = await _context.Services
 				.Include(s => s.Category)
-				.FirstOrDefaultAsync(s => s.Id == serviceId);
+				.FirstOrDefaultAsync(s => s.Name == serviceName);
 
 			if (service == null)
 			{
@@ -90,5 +90,6 @@ namespace ServiceHub.Controllers
 
 			return Ok(providerDtos);
 		}
+
 	}
 }

@@ -166,17 +166,23 @@ namespace ServiceHub.Controllers
 		}
 
 
+
 		[HttpGet("provider-status/{id}")]
 		public async Task<IActionResult> GetProviderStatus(int id)
 		{
-			var provider = await _context.ServiceProviders.FindAsync(id);
+			var provider = await _context.ServiceProviders
+				.Where(p => p.Id == id)
+				.Select(p => new { p.Status })
+				.SingleOrDefaultAsync();
+
 			if (provider == null)
 			{
-				return NotFound("Service provider not found.");
+				return NotFound();
 			}
 
-			return Ok(new { provider.Id, provider.Name, provider.Status });
+			return Ok(provider.Status);
 		}
+
 
 		[HttpGet("provider-details/{id}")]
 		public async Task<IActionResult> GetProviderDetails(int id)
@@ -184,7 +190,7 @@ namespace ServiceHub.Controllers
 			var provider = await _context.ServiceProviders
 				.Include(p => p.ServiceCategory)
 				.AsNoTracking()
-				.FirstOrDefaultAsync(p => p.Id == id);
+				.FirstOrDefaultAsync(p => p.ServiceCategory.Id == id);
 
 			if (provider == null)
 			{
@@ -204,5 +210,5 @@ namespace ServiceHub.Controllers
 			return Ok(providerDto);
 		}
 
-	}
+	}	
 }

@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace ServiceHub.Migrations
 {
     /// <inheritdoc />
-    public partial class AddServiceCategoryTable : Migration
+    public partial class UpdateTablesAndColumns : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

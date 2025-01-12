@@ -609,15 +609,15 @@
   },
   {
     "ContainingType": "ServiceHub.Controllers.ServiceController",
-    "Method": "GetProvidersByServiceId",
-    "RelativePath": "api/Service/{serviceId}/providers",
+    "Method": "GetProvidersByServiceName",
+    "RelativePath": "api/Service/providers/{serviceName}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "serviceId",
-        "Type": "System.Int32",
+        "Name": "serviceName",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],

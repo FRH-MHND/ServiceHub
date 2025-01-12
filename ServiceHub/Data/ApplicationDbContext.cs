@@ -29,7 +29,7 @@ namespace ServiceHub.Data
 			modelBuilder.Entity<ServiceProvider>()
 				.HasOne(sp => sp.ServiceCategory)
 				.WithMany(sc => sc.ServiceProviders)
-				.HasForeignKey(sp => sp.ServiceCategoryId);
+				.HasForeignKey(sp => sp.ServiceCategory.Id);
 		}
 	}
 }
