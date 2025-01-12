@@ -91,7 +91,7 @@ namespace ServiceHub.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "ServiceCategories",
+                name: "ServiceCategory",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -101,7 +101,7 @@ namespace ServiceHub.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ServiceCategories", x => x.Id);
+                    table.PrimaryKey("PK_ServiceCategory", x => x.Id);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
@@ -231,9 +231,9 @@ namespace ServiceHub.Migrations
                 {
                     table.PrimaryKey("PK_ServiceProviders", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_ServiceProviders_ServiceCategories_ServiceCategoryId",
+                        name: "FK_ServiceProviders_ServiceCategory_ServiceCategoryId",
                         column: x => x.ServiceCategoryId,
-                        principalTable: "ServiceCategories",
+                        principalTable: "ServiceCategory",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 })
@@ -367,7 +367,7 @@ namespace ServiceHub.Migrations
                 name: "ServiceProviders");
 
             migrationBuilder.DropTable(
-                name: "ServiceCategories");
+                name: "ServiceCategory");
         }
     }
 }

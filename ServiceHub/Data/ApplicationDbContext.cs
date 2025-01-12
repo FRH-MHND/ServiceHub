@@ -22,14 +22,14 @@ namespace ServiceHub.Data
 		public DbSet<FAQ> FAQs { get; set; }
 		public DbSet<SupportContact> SupportContacts { get; set; }
 		public DbSet<AdminActionLog> AdminActionLogs { get; set; }
-		public DbSet<ServiceCategory> ServiceCategories { get; set; }
+		public DbSet<ServiceCategory> ServiceCategory { get; set; }
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
 			modelBuilder.Entity<ServiceProvider>()
 				.HasOne(sp => sp.ServiceCategory)
 				.WithMany(sc => sc.ServiceProviders)
-				.HasForeignKey(sp => sp.ServiceCategory.Id);
+				.HasForeignKey(sp => sp.ServiceCategoryId);
 		}
 	}
 }

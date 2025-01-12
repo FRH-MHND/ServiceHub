@@ -219,7 +219,7 @@ namespace ServiceHub.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ServiceCategories");
+                    b.ToTable("ServiceCategory");
                 });
 
             modelBuilder.Entity("ServiceHub.Models.ServiceProvider", b =>

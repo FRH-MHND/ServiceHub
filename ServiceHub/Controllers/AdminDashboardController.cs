@@ -41,19 +41,23 @@ namespace ServiceHub.Controllers
 		}
 
 		[HttpPost("users/{userId}")]
-		public async Task<IActionResult> UpdateUserProfile(int userId, [FromBody] UserProfileDto userProfileDto)
-		{
-			var user = await _context.UserProfiles.FindAsync(userId);
-			if (user == null)
-			{
-				return NotFound();
-			}
+public async Task<IActionResult> UpdateUserProfile(int userId, [FromBody] UserProfileDto userProfileDto)
+{
+    var user = await _context.UserProfiles.FindAsync(userId);
+    if (user == null)
+    {
+        return NotFound();
+    }
 
-			_mapper.Map(userProfileDto, user);
-			await _context.SaveChangesAsync();
+    // Manually map properties, excluding the Id
+    user.Name = userProfileDto.Name;
+    user.Email = userProfileDto.Email;
+    // Map other properties as needed
 
-			return Ok();
-		}
+    await _context.SaveChangesAsync();
+
+    return Ok();
+}
 
 		[HttpPost("users/{userId}/deactivate")]
 		public async Task<IActionResult> DeactivateUser(int userId)
@@ -89,19 +93,25 @@ namespace ServiceHub.Controllers
 		}
 
 		[HttpPut("services/{serviceId}")]
-		public async Task<IActionResult> UpdateService(int serviceId, [FromBody] ServiceDto serviceDto)
-		{
-			var service = await _context.Services.FindAsync(serviceId);
-			if (service == null)
-			{
-				return NotFound();
-			}
+	public async Task<IActionResult> UpdateService(int serviceId, [FromBody] ServiceDto serviceDto)
+{
+    // Retrieve the service from the database
+    var service = await _context.Services.FindAsync(serviceId);
+    if (service == null)
+    {
+        return NotFound("Service not found.");
+    }
 
-			_mapper.Map(serviceDto, service);
-			await _context.SaveChangesAsync();
+    // Manually map properties that are updatable
+    service.Name = serviceDto.Name; // Example property
+    service.Description = serviceDto.Description; // Example property
+    service.Price = serviceDto.Price; // Example property
 
-			return Ok();
-		}
+    // Save changes to the database
+    await _context.SaveChangesAsync();
+
+    return Ok("Service updated successfully.");
+}
 
 		[HttpDelete("services/{serviceId}")]
 		public async Task<IActionResult> DeleteService(int serviceId)

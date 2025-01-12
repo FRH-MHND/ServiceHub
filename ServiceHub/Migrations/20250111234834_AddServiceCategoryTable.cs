@@ -12,7 +12,7 @@ namespace ServiceHub.Migrations
 		protected override void Up(MigrationBuilder migrationBuilder)
 		{
 			migrationBuilder.CreateTable(
-				name: "ServiceCategories",
+				name: "ServiceCategory",
 				columns: table => new
 				{
 					Id = table.Column<int>(type: "int", nullable: false)
@@ -22,7 +22,7 @@ namespace ServiceHub.Migrations
 				},
 				constraints: table =>
 				{
-					table.PrimaryKey("PK_ServiceCategories", x => x.Id);
+					table.PrimaryKey("PK_ServiceCategory", x => x.Id);
 				})
 				.Annotation("MySql:CharSet", "utf8mb4");
 
@@ -48,7 +48,7 @@ namespace ServiceHub.Migrations
 		protected override void Down(MigrationBuilder migrationBuilder)
 		{
 			migrationBuilder.DropTable(
-				name: "ServiceCategories");
+				name: "ServiceCategory");
 		}
 	}
 }

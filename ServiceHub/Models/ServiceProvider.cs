@@ -19,6 +19,9 @@ namespace ServiceHub.Models
 		public string AboutMe { get; set; }
 		public Service? Service { get; set; }
 
+    	public int ServiceCategoryId { get; set; } // Foreign key
+
+
 
 	}
 }

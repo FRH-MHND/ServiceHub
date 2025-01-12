@@ -82,7 +82,7 @@ namespace ServiceHub.Controllers
 				return BadRequest("Provider with the same email or phone number already exists.");
 			}
 
-			var serviceCategory = await _context.ServiceCategories
+			var serviceCategory = await _context.ServiceCategory
 				.FirstOrDefaultAsync(sc => sc.Name == providerRegistrationDto.ServiceCategory);
 
 			if (serviceCategory == null)
@@ -190,7 +190,7 @@ namespace ServiceHub.Controllers
 			var provider = await _context.ServiceProviders
 				.Include(p => p.ServiceCategory)
 				.AsNoTracking()
-				.FirstOrDefaultAsync(p => p.ServiceCategory.Id == id);
+				.FirstOrDefaultAsync(p => p.ServiceCategoryId == id);
 
 			if (provider == null)
 			{
