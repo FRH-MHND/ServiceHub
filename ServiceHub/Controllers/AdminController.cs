@@ -185,30 +185,29 @@ namespace ServiceHub.Controllers
 
 
 		[HttpGet("provider-details/{id}")]
-		public async Task<IActionResult> GetProviderDetails(int id)
-		{
-			var provider = await _context.ServiceProviders
-				.Include(p => p.ServiceCategory)
-				.AsNoTracking()
-				.FirstOrDefaultAsync(p => p.ServiceCategoryId == id);
+public async Task<IActionResult> GetProviderDetails(int id)
+{
+    var provider = await _context.ServiceProviders
+        .Include(p => p.ServiceCategory)
+        .AsNoTracking()
+        .FirstOrDefaultAsync(p => p.Id == id); // Query by id in the database
 
-			if (provider == null)
-			{
-				return NotFound("Service provider not found.");
-			}
+    if (provider == null)
+    {
+        return NotFound("Service provider not found.");
+    }
 
-			var providerDto = new ProviderDetailsDto
-			{
-				Id = provider.Id,
-				Name = provider.Name,
-				PhoneNumber = provider.PhoneNumber,
-				ServiceCategory = provider.ServiceCategory.Name,
-				Status = provider.Status,
-				AvailabilityStatus = provider.AvailabilityStatus
-			};
+    var providerDto = new ProviderDetailsDto
+    {
+        Id = provider.Id,
+        Name = provider.Name,
+        PhoneNumber = provider.PhoneNumber,
+        ServiceCategory = provider.ServiceCategory?.Name, // Handle potential null ServiceCategory
+        Status = provider.Status,
+        AvailabilityStatus = provider.AvailabilityStatus
+    };
 
-			return Ok(providerDto);
-		}
-
+    return Ok(providerDto);
+}
 	}	
 }
